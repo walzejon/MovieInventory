@@ -1,0 +1,9 @@
+/*
+Assignment 4 
+CSS343
+Cindy Acevedo, Jibran Ahmed, and Jonathan Walzer
+Last edit 11/18/2020 
+
+This project keeps track of the inventory of the file data4movies.txt. 
+and processes various commands for another file called data4commands.txt
+*/
