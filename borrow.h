@@ -3,7 +3,7 @@
 #define MOVIEINVENTORY_BORROW_H
 #include "movie.h"
 
-class Borrow : Transaction {
+class Borrow : public Transaction {
 public:
 	Borrow();
 	~Borrow();

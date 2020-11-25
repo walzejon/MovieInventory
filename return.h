@@ -3,7 +3,7 @@
 #define MOVIEINVENTORY_RETURN_H
 #include "movie.h"
 
-class Return : Transaction {
+class Return : public Transaction {
 public:
 	bool returnMovie(Movie movie);
 	String displayReturned();
