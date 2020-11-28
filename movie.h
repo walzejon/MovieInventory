@@ -12,14 +12,14 @@ public:
     Movie();
     ~Movie();
     String getFormat();
-    setFormat();
+    void setFormat();
     int getCurrentStock();
-    setCurrentStock();
-    setStockOwned(int n);
+    void setCurrentStock();
+    void setStockOwned(int n);
     String getTitle();
-    setTitle(string t);
+    void setTitle(string t);
     String getDirector();
-    setDirector(string s);
+    void setDirector(string s);
     string toString();
 private:
     String movieFormat;
