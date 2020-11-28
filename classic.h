@@ -4,14 +4,16 @@
 
 #ifndef MOVIEINVENTORY_CLASSIC_H
 #define MOVIEINVENTORY_CLASSIC_H
+#include "movie.h"
 
+friend ostream& operator<<(ostream& outputStream, Classic& classic);
 
-class Classic {
+class Classic : public Movie {
 public:
-    getMARD();
-    setMARD(string MARD);
+    string getMARD();
+    void setMARD(string);
 private:
-    String MARD;
+    string MARD;
 };
 
 

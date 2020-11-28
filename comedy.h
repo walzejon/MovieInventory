@@ -4,12 +4,14 @@
 
 #ifndef MOVIEINVENTORY_COMEDY_H
 #define MOVIEINVENTORY_COMEDY_H
+#include "movie.h"
 
+friend ostream& operator<<(ostream& outputStream, Comedy& com);
 
-class Comedy {
+class Comedy : public Movie {
 public:
-    getYearReleased();
-    setYearReleased(int year);
+    int getYearReleased();
+    void setYearReleased(int year);
 private:
     int yearReleased;
 };

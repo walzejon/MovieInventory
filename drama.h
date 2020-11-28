@@ -2,14 +2,16 @@
 // Created by stlp on 11/24/20.
 //
 
-#ifndef MOVIEINVENTORY_DREAMA_H
-#define MOVIEINVENTORY_DREAMA_H
+#ifndef MOVIEINVENTORY_DRAMA_H
+#define MOVIEINVENTORY_DRAMA_H
+#include "movie.h"
 
+friend ostream& operator<<(ostream& outputStream, Drama& drama);
 
-class Dreama {
+class Drama : public Movie {
 public:
-    getYearReleased();
-    setYearReleased(int year);
+    int getYearReleased();
+    void setYearReleased(int year);
 private:
     int yearReleased;
 };
