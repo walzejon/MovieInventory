@@ -5,8 +5,11 @@
 #ifndef MOVIEINVENTORY_STORE_H
 #define MOVIEINVENTORY_STORE_H
 #include "transaction.h"
+#include "bintree.h"
+#include "customer.h"
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -26,7 +29,7 @@ public:
 private:
     HashTable<int ID, Customer cust>;
     BinTree F, D, C; //Comedy, Drama, Classic       - Is this how we want to do this?
-    Vector<Transaction> transHistory;
+    vector<Transaction> transHistory;
 };
 
 
