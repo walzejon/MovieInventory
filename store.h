@@ -5,6 +5,8 @@
 #ifndef MOVIEINVENTORY_STORE_H
 #define MOVIEINVENTORY_STORE_H
 #include "transaction.h"
+#include "bintree.h"
+#include "customer.h"
 #include <iostream>
 #include <fstream>
 
