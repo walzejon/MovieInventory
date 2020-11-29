@@ -9,9 +9,8 @@
 #include <iomanip>
 using namespace std;
 
-friend ostream& operator<<(ostream& outputStream, Movie& movie);
-
 class Movie {
+    friend ostream& operator<<(ostream& outputStream, Movie& movie);
 
 public:
     // Constructor & Destructor

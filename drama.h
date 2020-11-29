@@ -6,9 +6,8 @@
 #define MOVIEINVENTORY_DRAMA_H
 #include "movie.h"
 
-friend ostream& operator<<(ostream& outputStream, Drama& drama);
-
 class Drama : public Movie {
+    friend ostream& operator<<(ostream& outputStream, Drama& drama);
 public:
     int getYearReleased();
     void setYearReleased(int year);
