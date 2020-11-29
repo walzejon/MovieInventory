@@ -24,8 +24,15 @@ public:
 	Customer(istream&);
     //copy constructor 
 	Customer(const Customer&);
+<<<<<<< HEAD
 	//First and last Name constructor
 	Customer(int ID, string firstN, string lastN);
+=======
+
+	//First and last Name constructor
+	Customer(int ID, string firstN, string lastN);
+
+>>>>>>> d5e4b8ca1a2f41d2ae7bd868f42d5099107c737a
     // desctructor
 	virtual ~Customer();
 

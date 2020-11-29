@@ -14,7 +14,7 @@ void Store::addCustomers(ifstream &infile)
 {
     //Assume data is set in format below
     // int CustomerID String firstName String lastName
-    //EX 3333 Witch Wicked
+    // EX 3333 Witch Wicked
     int ID;
     string firstName;
     string lastName;
