@@ -7,23 +7,26 @@
 
 #endif //MOVIEINVENTORY_HASHTABLE_H
 #include <iostream>
+#include <list>
 #include "customer.h"
 
 using namespace std;
 
 class HashTable{
+
 public:
     HashTable();
     ~HashTable();
-    int hashFunction(int);
-    bool insertItem(int, Customer);
-    void removeItem(int, Customer);
-    bool findItem();
+    int hashFunction(int ID);
+    void insertItem(int, Customer);
+    void removeItem(int ID);
+    bool findItem(int ID);
     void print();
     void clear();
-    bool isEmpty();
+    bool isEmpty() const;
 
 private:
     int size;
-    //table:list<pair<int,Customer>>[size]
+    static const int hashGroup = 10;
+    list<pair<int,Customer>>table[hashGroup];
 };
