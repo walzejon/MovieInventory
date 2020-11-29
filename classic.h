@@ -6,9 +6,8 @@
 #define MOVIEINVENTORY_CLASSIC_H
 #include "movie.h"
 
-friend ostream& operator<<(ostream& outputStream, Classic& classic);
-
 class Classic : public Movie {
+    friend ostream& operator<<(ostream& outputStream, Classic& classic);
 public:
     string getMARD();
     void setMARD(string);
