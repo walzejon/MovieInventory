@@ -13,9 +13,7 @@ public:
     int getYearReleased();
     void setYearReleased(int year);
     bool operator<(const Drama& rightSide) const;
-    bool operator<=(const Drama& rightSide) const;
     bool operator>(const Drama& rightSide) const;
-    bool operator>=(const Drama& rightSide) const;
     bool operator==(const Drama& rightSide) const;
     bool operator!=(const Drama& rightSide) const;
 private:
