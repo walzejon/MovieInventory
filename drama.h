@@ -5,7 +5,6 @@
 #ifndef MOVIEINVENTORY_DRAMA_H
 #define MOVIEINVENTORY_DRAMA_H
 #include "movie.h"
-#include <algorithm>
 
 class Drama : public Movie {
     friend ostream& operator<<(ostream& outputStream, Drama& drama);
