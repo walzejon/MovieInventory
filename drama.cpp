@@ -28,6 +28,7 @@ bool Drama::operator<(const Drama& rightSide) const {
 			continue;
 		else return false;
 	}
+	return true;
 }
 
 bool Drama::operator>(const Drama& rightSide) const {
