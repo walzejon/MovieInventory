@@ -39,7 +39,7 @@ private:
 	
 	struct Node
 	{
-		Inventory* movie; 
+		//Movie* movie;
 		Node* left, * right; 
 	};
 
