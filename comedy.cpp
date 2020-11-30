@@ -28,6 +28,7 @@ bool Comedy::operator<(const Comedy& rightSide) const {
 			continue;
 		else return false;
 	}
+	return true;
 }
 
 bool Comedy::operator>(const Comedy& rightSide) const {
