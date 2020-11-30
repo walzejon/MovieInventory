@@ -16,52 +16,34 @@ void Classic::setMARD(string mard) {
 }
 
 bool Classic::operator<(const Classic& rightSide) const {
-	int maxTitle = max(this->title.length(), rightSide.title.length());
-	int maxDirector = max(this->director.length(), rightSide.director.length());
-	int maxMARD = max(this->MARD.length(), rightSide.MARD.length());
-	for (int i = 0; i < maxDirector; ++i) {
-		if (this->director[i] == rightSide.director[i] || this->director[i] <
-			rightSide.director[i]) continue;
-		else return false;
+	if (this->director.compare(rightSide.director) != 0) {
+		return this->director.compare(rightSide.director) < 0;
+		if (this->title.compare(rightSide.title) != 0) {
+			return this->title.compare(rightSide.title) < 0;
+			if (this->MARD.compare(rightSide.MARD) != 0) {
+				return this->MARD.compare(rightSide.MARD) < 0;
+			}
+		}
 	}
-	for (int i = 0; i < maxTitle; ++i) {
-		if (this->title[i] == rightSide.title[i] || this->title[i] < rightSide.title[i])
-			continue;
-		else return false;
-	}
-	for (int i = 0; i < maxMARD; ++i) {
-		if (this->MARD[i] == rightSide.MARD[i] || this->MARD[i] < rightSide.MARD[i])
-			continue;
-		else return false;
-	}
-	return true;
+	return false;
 }
 
 bool Classic::operator>(const Classic& rightSide) const {
-	int maxTitle = max(this->title.length(), rightSide.title.length());
-	int maxDirector = max(this->director.length(), rightSide.director.length());
-	int maxMARD = max(this->MARD.length(), rightSide.MARD.length());
-	for (int i = 0; i < maxDirector; ++i) {
-		if (this->director[i] == rightSide.director[i] || this->director[i] >
-			rightSide.director[i]) continue;
-		else return false;
+	if (this->director.compare(rightSide.director) != 0) {
+		return this->director.compare(rightSide.director) > 0;
+		if (this->title.compare(rightSide.title) != 0) {
+			return this->title.compare(rightSide.title) > 0;
+			if (this->MARD.compare(rightSide.MARD) != 0) {
+				return this->MARD.compare(rightSide.MARD) > 0;
+			}
+		}
 	}
-	for (int i = 0; i < maxTitle; ++i) {
-		if (this->title[i] == rightSide.title[i] || this->title[i] > rightSide.title[i])
-			continue;
-		else return false;
-	}
-	for (int i = 0; i < maxMARD; ++i) {
-		if (this->MARD[i] == rightSide.MARD[i] || this->MARD[i] > rightSide.MARD[i])
-			continue;
-		else return false;
-	}
-	return true;
+	return false;
 }
 
 bool Classic::operator==(const Classic& rightSide) const {
-	return (this->director == rightSide.director && this->title == rightSide.title &&
-		this->MARD == rightSide.MARD);
+	return (this->director.compare(rightSide.director) == 0 && this->title.compare(rightSide.title)
+		== 0 && this->MARD.compare(rightSide.MARD) == 0);
 }
 
 bool Classic::operator!=(const Classic& rightSide) const {
