@@ -11,6 +11,12 @@ class Comedy : public Movie {
 public:
     int getYearReleased();
     void setYearReleased(int year);
+    bool operator<(const Comedy& rightSide) const;
+    bool operator<=(const Comedy& rightSide) const;
+    bool operator>(const Comedy& rightSide) const;
+    bool operator>=(const Comedy& rightSide) const;
+    bool operator==(const Comedy& rightSide) const;
+    bool operator!=(const Comedy& rightSide) const;
 private:
     int yearReleased;
 };
