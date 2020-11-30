@@ -25,12 +25,14 @@ public:
     void newMoviestock();
     void printCustomers();
     void printHistory();
-    void printMovies();
+    void printMovies(BinTree* A);
 
 private:
     HashTable customerTable<int ID, Customer cust>;
-    BinTree F, D, C; //Comedy, Drama, Classic       - Is this how we want to do this?
+
+    BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
+    void printHelp(Node* root);
 };
 
 

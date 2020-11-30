@@ -72,8 +72,8 @@ void HashTable::print()
         auto iter = table[i].begin();
         for(; iter != table[i].end(); iter++)
         {
-            cout << "[INFO] Key: " << iter->first << " Value: " << iter->second << endl;
-
+            cout << "[INFO] Key: " << iter->first << " Value: " << "iter->second.. but for now 'cust data'" << endl;
         }
     }
+    return;
 }

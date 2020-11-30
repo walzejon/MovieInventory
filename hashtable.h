@@ -7,6 +7,7 @@
 
 #endif //MOVIEINVENTORY_HASHTABLE_H
 #include <iostream>
+#include <cstring>
 #include <list>
 #include "customer.h"
 
@@ -20,7 +21,8 @@ public:
     int hashFunction(int ID);
     void insertItem(int, Customer);
     void removeItem(int ID);
-    bool findItem(int ID);
+    //bool hasItem(int ID); I added this but idk if we need it. I dont think so bc i think getCust can jus
+    Customer getCust(int ID); //idk how to do this
     void print();
     void clear();
     bool isEmpty() const;
