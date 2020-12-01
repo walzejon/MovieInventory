@@ -48,21 +48,11 @@ void Store::addMovieInventory(ifstream &infile)
     }
 }
 
-//Store
-void Store::printHelp(Node* root)
-{
-    if(root != nullptr)
-    {
-        cout<<root<<endl;
-        printHelp(root->left);
-        printHelp(root->right);
-    }
-}
 
 //preorder print
 void Store::printMovies(BinTree* A)
 {
-    printHelp(A->root);
+    A->inorderDisplay(A->getRoot());
 }
 
 void Store::doCommands(ifstream &infile)

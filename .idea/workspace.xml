@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store.h" beforeDir="false" afterPath="$PROJECT_DIR$/store.h" afterDir="false" />
@@ -72,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606283401662</updated>
-      <workItem from="1606283403918" duration="14069000" />
+      <workItem from="1606283403918" duration="16741000" />
     </task>
     <servers />
   </component>

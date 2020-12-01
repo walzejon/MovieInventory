@@ -22,17 +22,15 @@ public:
     void addCustomers(ifstream&);
     void addMovieInventory(ifstream&);
     void doCommands(ifstream&);
-    void newMoviestock();
+    //void newMoviestock(); idk if we need this
     void printCustomers();
     void printHistory();
     void printMovies(BinTree* A);
 
 private:
     HashTable customerTable<int ID, Customer cust>;
-
     BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
-    void printHelp(Node* root);
 };
 
 
