@@ -37,6 +37,12 @@ Customer::Customer(const Customer& rightSide)
 }
  
 
+Customer::Customer(int ID, string firstName, string lastName) {
+	this->id = ID;
+	this->firstName = firstName;
+	this->lastName = lastName;
+}
+
 // Destructor
  
 Customer::~Customer() 
