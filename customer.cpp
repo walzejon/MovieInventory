@@ -37,7 +37,7 @@ Customer::Customer(const Customer& rightSide)
 }
  
 
-Customer::Customer(int ID, string& firstN, string& lastN) {
+Customer::Customer(int ID, string firstN, string lastN) {
 	this->id = ID;
 	this->firstName = firstN;
 	this->lastName = lastN;
