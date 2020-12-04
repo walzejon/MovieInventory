@@ -5,8 +5,8 @@
 
 bool HashTable::isEmpty() const
 {
-    int sum;
-    for (int i; i < hashGroup; i++)
+    int sum=0;
+    for (int i=0; i < hashGroup; i++)
     {
         sum+=table[i].size();
     }
