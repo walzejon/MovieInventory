@@ -26,11 +26,10 @@ BinTree::~BinTree()
 //insert
 // Inserts the given/taken movie to the tree. No duplicate allowed.
 // Avoid duplicates and create a bst.
-
-bool BinTree::insert(Inventory* insertMovie, const int copiesIn)
+template<typename T>
+bool BinTree<T>::insert(T* insertMovie, const int copiesIn)
 {
 	Node* ptr = new Node();
-	// if (
 	ptr->movie = insertMovie; 
 	ptr->movie->setMaxStock(copiesIn);
 
@@ -108,8 +107,8 @@ void BinTree::makeEmpty()
 
 
 //destroyTree
- 
-void BinTree::destroyTree(Node*& tree)
+template<typename T>
+void BinTree<T>::destroyTree(const T& tree)
 {
 	if (tree != NULL)
 	{
@@ -125,8 +124,8 @@ void BinTree::destroyTree(Node*& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-
-bool BinTree::retrieve(const Inventory& dataItem, Inventory*& dataFound) const
+template<typename T>
+bool BinTree<T>::retrieve(const T& dataItem, T*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
 
@@ -140,8 +139,8 @@ bool BinTree::retrieve(const Inventory& dataItem, Inventory*& dataFound) const
 // retrieveHelper
 // A helper method for retrieve. It recursively finds the provided 
 // object in this tree. Returns NULL if the item is not found.
-	
-void BinTree::retrieveHelper(Node* curPtr, const Inventory& dataItem,Inventory*& dataFound) const
+template<typename T>	
+void BinTree<T>::retrieveHelper(Node* curPtr, const Inventory& dataItem,Inventory*& dataFound) const
 {
 	//iff current point is null and data is null
 	if (curPtr == NULL) 
