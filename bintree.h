@@ -8,6 +8,8 @@ Assignment 4
 #define BINTREE_H
 #include "movie.h" //make sure to name it movie
 
+template <typename T>
+
 class BinTree
 {
 	
@@ -22,15 +24,15 @@ public:
 	~BinTree();
 
 	//insert movie 
-	bool insert(Inventory* insertMovie, const int copiesIn);
+	bool insert(T* insertMovie, const int copiesIn);
 	//check if empty
 	bool isEmpty() const;
 
 	void makeEmpty(); 
 	//retrieve movie
-	bool retrieve(const Inventory& dataItem, Inventory*& dataFound) const;
+	bool retrieve(const T&, T*&) const;
 	void retrieveHelper(Node* curPtr,
-	const Inventory& dataItem, Inventory*& dataFound) const;
+	const T& dataItem, T*& dataFound) const;
 	//displays in order
 	void inorderDisplay(Node* current) const;
 	//gets the root
@@ -46,6 +48,6 @@ private:
 	Node* root; 
 
 	//helper method to destroy the tree
-	void destroyTree(Node*& tree);
+	void destroyTree(const T&);
 };
 #endif
