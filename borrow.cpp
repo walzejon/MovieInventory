@@ -13,7 +13,7 @@ Borrow::Borrow(const Borrow& rightSide) {
 Borrow::~Borrow() { }
 
 bool Borrow::borrowMovie(string media, Movie movie, Customer* cust) {
-	if (hasMovie() == true) {
+	if (hasMovie(movie) == true) {
 		movie.setCurrentStock(movie.getCurrentStock() - 1);
 		movie.setStockOwned(movie.getStockOwned() + 1);
 		movieType = media;
@@ -30,7 +30,7 @@ string Borrow::display() const {
 	cout << movieType << " " << transactionType << " " << endl;
 }
 
-bool Borrow::hasMovie(Movie& movie) {
+bool Borrow::hasMovie(Movie movie) {
 	
 }
 
