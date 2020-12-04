@@ -26,9 +26,6 @@ public:
 	Customer(const Customer&);
 	//First and last Name constructor
 	Customer(int ID, string firstN, string lastN);
-
-	//First and last Name constructor
-	Customer(int ID, string firstN, string lastN);
     // desctructor
 	virtual ~Customer();
 
