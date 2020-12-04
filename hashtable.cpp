@@ -63,7 +63,7 @@ void HashTable::removeItem(int ID)
     return;
 }
 
-void HashTable::print()
+void HashTable::display()
 {
     for(int i = 0; i < hashGroup; i++)
     {
@@ -72,10 +72,9 @@ void HashTable::print()
         auto iter = table[i].begin();
         for(; iter != table[i].end(); iter++)
         {
-            cout << "[INFO] Key: " << iter->getCustomerID() << " Value: " << "iter->second.. but for now 'cust data'" << endl;
+            cout << "At table position: " << i << " [INFO] Key: " << iter->getCustomerID() << " Value: " << "iter->second.. but for now 'cust data'" << endl;
         }
     }
-    return;
 }
 
 Customer HashTable::get(int ID) {
@@ -103,3 +102,30 @@ Customer HashTable::get(int ID) {
     }
     return Customer(-1,"notFound","notFound"); //Customer not found
 }
+
+//int main()
+//{
+//    HashTable HT;
+//
+//    if(HT.isEmpty())
+//    {
+//        cout<<"isEmpty works right" <<endl;
+//    } else
+//    {
+//        cout << "ERROR isEmpty is not working" << endl;
+//    }
+//
+//    Customer James =  Customer(1102,"James","Jackson");
+//    HT.insertItem(1102,James);
+//    HT.insertItem(1101,Customer(1101,"Hi","Bye"));
+//    HT.insertItem(6969, Customer(6969,"sixtey","nine"));
+//    HT.insertItem(1101,Customer(1101,"James","Bond"));
+//
+//    HT.display();
+//
+//    HT.removeItem(1101);
+//    HT.display();
+//
+//    if(HT.isEmpty()) cout << "ERROR isEmpty is not working" << endl;
+//    else cout<<"isEmpty works right" <<endl;
+//}

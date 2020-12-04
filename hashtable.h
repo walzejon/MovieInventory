@@ -13,6 +13,7 @@
 
 using namespace std;
 
+// Assumption: Data file has no two Customers with the same ID
 class HashTable{
 
 public:
@@ -22,8 +23,8 @@ public:
     void insertItem(int, Customer);
     void removeItem(int ID);
     //bool containsKey(int ID);
-    Customer get(int ID); //idk how to do this
-    void print();
+    Customer get(int ID);
+    void display();
     void clear();
     bool isEmpty() const;
 
