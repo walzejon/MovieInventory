@@ -13,6 +13,7 @@ Assignment 4
 #include <string>
 #include <vector>
 #include "transaction.h"  //make sure to name it transaction
+using namespace std;
 
 //from text file
 class Customer
@@ -42,7 +43,7 @@ public:
 	//operator overloads for comparison
 	virtual bool operator==(const Customer& rightSide) const; 
 	virtual bool operator!=(const Customer& rightSide) const; 
-	virtual Customer& operator=(const Customer& rightSide);
+	Customer& operator=(const Customer& rightSide);
 
 private:
 
