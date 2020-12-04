@@ -4,6 +4,7 @@
 
 #ifndef MOVIEINVENTORY_STORE_H
 #define MOVIEINVENTORY_STORE_H
+#include "hashtable.h"
 #include "transaction.h"
 #include "bintree.h"
 #include "customer.h"
@@ -21,14 +22,14 @@ public:
     void addCustomers(ifstream&);
     void addMovieInventory(ifstream&);
     void doCommands(ifstream&);
-    void newMoviestock();
+    //void newMoviestock(); idk if we need this
     void printCustomers();
     void printHistory();
-    void printMovies();
+    void printMovies(BinTree* A);
 
 private:
-    HashTable<int ID, Customer cust>;
-    BinTree F, D, C; //Comedy, Drama, Classic       - Is this how we want to do this?
+    HashTable customerTable<int ID, Customer cust>;
+    BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
 };
 

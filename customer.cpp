@@ -135,3 +135,13 @@ bool Customer::operator!=(const Customer& rightSide) const
  {
 	return (id != rightSide.id);
 }
+
+Customer& Customer::operator=(const Customer& rightSide) {
+	this->id = rightSide.id;
+	this->firstName = rightSide.firstName;
+	this->lastName = rightSide.lastName;
+	for (int i = 0; i < transHistory.size(); ++i) {
+		transHistory[i] = rightSide.tranHistory[i];
+	}
+	return *this;
+}

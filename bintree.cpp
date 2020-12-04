@@ -30,6 +30,7 @@ BinTree::~BinTree()
 bool BinTree::insert(Inventory* insertMovie, const int copiesIn)
 {
 	Node* ptr = new Node();
+	// if (
 	ptr->movie = insertMovie; 
 	ptr->movie->setMaxStock(copiesIn);
 

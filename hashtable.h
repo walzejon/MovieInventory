@@ -7,6 +7,7 @@
 
 #endif //MOVIEINVENTORY_HASHTABLE_H
 #include <iostream>
+#include <cstring>
 #include <list>
 #include "customer.h"
 
@@ -20,13 +21,15 @@ public:
     int hashFunction(int ID);
     void insertItem(int, Customer);
     void removeItem(int ID);
-    bool findItem(int ID);
+    //bool containsKey(int ID);
+    Customer get(int ID); //idk how to do this
     void print();
     void clear();
     bool isEmpty() const;
 
 private:
     int size;
-    static const int hashGroup = 10;
-    list<pair<int,Customer>>table[hashGroup];
+    static const int hashGroup = 100; //Should be a prime number
+    //list<pair<int,Customer>>table[hashGroup];
+    list<Customer> table[hashGroup];
 };
