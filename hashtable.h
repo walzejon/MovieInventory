@@ -29,6 +29,7 @@ public:
 
 private:
     int size;
-    static const int hashGroup = 100;
-    list<pair<int,Customer>>table[hashGroup];
+    static const int hashGroup = 100; //Should be a prime number
+    //list<pair<int,Customer>>table[hashGroup];
+    list<Customer> table[hashGroup];
 };
