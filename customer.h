@@ -42,7 +42,7 @@ public:
 	//operator overloads for comparison
 	virtual bool operator==(const Customer& rightSide) const; 
 	virtual bool operator!=(const Customer& rightSide) const; 
-	Customer& operator=(const Customer& rightSide);
+	virtual Customer& operator=(const Customer& rightSide);
 
 private:
 
