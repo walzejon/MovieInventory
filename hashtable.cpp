@@ -82,21 +82,24 @@ Customer HashTable::get(int ID) {
     int index = hashFunction(ID);
     bool foundCustomer = false;
     Customer findMe;
-    auto* ptr = table[index]; //error here
-    while(ptr!= nullptr)
+    auto& cell = table[index]; //error here
+    auto iter = begin(cell);
+
+    for(; iter != end(cell); iter++)
     {
-        if(ptr->id == ID)
-        {
+        if(iter->getCustomerID() == ID) {
             foundCustomer = true;
-            findMe = ptr->Customer;
+            findMe = Customer(iter->getCustomerID(),iter->getFirstName(), iter->getLastName());
+            break;
         }
     }
     if(foundCustomer)
     {
         cout << "Found Customer ID: " << ID << endl;
+        return findMe;
     } else
     {
         cout << "[ERROR] ID: " << ID << " not found." << endl;
     }
-    return findMe;
+    return Customer(-1,"notFound","notFound"); //Customer not found
 }
