@@ -27,11 +27,12 @@ void HashTable::insertItem(int ID, Customer cust) // should i require the user t
     auto iter = begin(cell);
     for(; iter != end(cell); iter++)
     {
-        if(iter->getCustomerID() == ID) {
+        if(iter->getCustomerID() == cust.getCustomerID()) {
+            cout << "[WARNING] Customer ID already exists. Customer: " <<
+                 iter->getFirstName() << " " << iter->getLastName() << " " << "Replaced by " << cust.getFirstName()
+                 << " " << cust.getLastName() << endl;
             keyExists = true;
-            //iter->second = cust; what video showed
-            cell.emplace_back(cust); // what i did instead?
-            cout << "[WARNING] Customer ID already exists. Customer replaced" <<endl;
+            *iter = cust;
             break;
         }
     }
