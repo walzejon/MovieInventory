@@ -136,7 +136,7 @@ bool Customer::operator!=(const Customer& rightSide) const
 	return (id != rightSide.id);
 }
 
-Customer Customer::operator=(const Customer& rightSide) {
+Customer& Customer::operator=(const Customer& rightSide) {
 	this->id = rightSide.id;
 	this->firstName = rightSide.firstName;
 	this->lastName = rightSide.lastName;
