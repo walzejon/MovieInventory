@@ -6,9 +6,10 @@ class Transaction {
 public:
 	Transaction();
 	~Transaction();
-private:
+protected:
 	int transactionID;
-	char type;
+	char transactionType;
+	string movieType;
 	bool hasBeenBorrowed;
 };
 

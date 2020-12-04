@@ -11,10 +11,10 @@ class Classic : public Movie {
 public:
     string getMARD();
     void setMARD(string);
-    bool operator<(const Classic& rightSide) const;
-    bool operator>(const Classic& rightSide) const;
-    bool operator==(const Classic& rightSide) const;
-    bool operator!=(const Classic& rightSide) const;
+    virtual bool operator<(const Classic& rightSide) const;
+    virtual bool operator>(const Classic& rightSide) const;
+    virtual bool operator==(const Classic& rightSide) const;
+    virtual bool operator!=(const Classic& rightSide) const;
 private:
     string MARD;
 };
