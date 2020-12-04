@@ -103,6 +103,25 @@ Customer HashTable::get(int ID) {
     return Customer(-1,"notFound","notFound"); //Customer not found
 }
 
+HashTable::HashTable() {
+    size = 100;
+}
+
+HashTable::~HashTable() {
+    this->clear();
+}
+
+int HashTable::getSize() {
+    return size;
+}
+
+void HashTable::clear() {
+    for(int i = 0; i <hashGroup; i++)
+    {
+        table[i].clear();
+    }
+}
+
 //int main()
 //{
 //    HashTable HT;

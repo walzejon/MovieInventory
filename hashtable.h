@@ -24,13 +24,14 @@ public:
     void removeItem(int ID);
     //bool containsKey(int ID);
     Customer get(int ID);
+    int getSize();
     void display();
     void clear();
     bool isEmpty() const;
 
 private:
     int size;
-    static const int hashGroup = 100; //Should be a prime number
+    static const int hashGroup = 101; //Should be a prime number
     //list<pair<int,Customer>>table[hashGroup];
     list<Customer> table[hashGroup];
 };
