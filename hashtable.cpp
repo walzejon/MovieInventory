@@ -71,7 +71,7 @@ void HashTable::display()
         auto iter = table[i].begin();
         for(; iter != table[i].end(); iter++)
         {
-            cout << "At table position: " << i << " [INFO] Key: " << iter->getCustomerID() << " Value: " << "iter->second.. but for now 'cust data'" << endl;
+            cout << "At table position: " << i << " [INFO] Key: " << iter->getCustomerID() << " Value: " << iter->getFirstName() << " " << iter->getLastName() << endl;
         }
     }
 }
