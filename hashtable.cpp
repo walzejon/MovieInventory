@@ -31,7 +31,7 @@ void HashTable::insertItem(int ID, Customer cust) // should i require the user t
             keyExists = true;
             //iter->second = cust; what video showed
             cell.emplace_back(cust); // what i did instead?
-            cout << "[WARNING] Customer ID already exists. Customer replaced";
+            cout << "[WARNING] Customer ID already exists. Customer replaced" <<endl;
             break;
         }
     }
@@ -52,15 +52,14 @@ void HashTable::removeItem(int ID)
         if(iter->getCustomerID() == ID) {
             keyExists = true;
             iter = cell.erase(iter);
-            cout << "[INFO] Customer ID " << ID << " removed";
+            cout << "[INFO] Customer ID " << ID << " removed" <<endl;
             break;
         }
     }
     if(!keyExists)
     {
-        cout << "[WARNING] Cutomer ID not found. Nothing was removed.";
+        cout << "[WARNING] Cutomer ID not found. Nothing was removed." << endl;
     }
-    return;
 }
 
 void HashTable::display()
