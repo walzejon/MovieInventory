@@ -140,7 +140,7 @@ bool BinTree<T>::retrieve(const T& dataItem, T*& dataFound) const
 // A helper method for retrieve. It recursively finds the provided 
 // object in this tree. Returns NULL if the item is not found.
 template<typename T>	
-void BinTree<T>::retrieveHelper(Node* curPtr, const Inventory& dataItem,Inventory*& dataFound) const
+void BinTree<T>::retrieveHelper(Node* curPtr, const T& dataItem, T*& dataFound) const
 {
 	//iff current point is null and data is null
 	if (curPtr == NULL) 
@@ -186,8 +186,10 @@ void BinTree::inorderDisplay(Node* current) const
 
 // getRoot
 // Show the root.
- 
-BinTree::Node* BinTree::getRoot() const 
+/*
+template <typename T> 
+Node* BinTree<T>::getRoot() const
 {
 	return this->root;
 }
+*/
