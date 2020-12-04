@@ -32,6 +32,5 @@ public:
 private:
     int size;
     static const int hashGroup = 101; //Should be a prime number
-    //list<pair<int,Customer>>table[hashGroup];
     list<Customer> table[hashGroup];
 };
