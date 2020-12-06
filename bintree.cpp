@@ -175,8 +175,8 @@ void BinTree::inorderDisplay(Node* current) const
 	{
 		inorderDisplay(current->left);
 
-		cout << right << setw(2) << current->movie->getAmountIn() << "  " <<
-			left << setw(3) << current->movie->getAmountOut() << " ";
+		cout << right << setw(2) << current->movie->getCurrentStock() << "  " <<
+			left << setw(3) << current->movie->setCurrentStock() << " ";
 		current->movie->display();
 
 		inorderDisplay(current->right);

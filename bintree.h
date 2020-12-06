@@ -39,9 +39,10 @@ public:
 	//Node* getRoot() const;
 private:
 	
+
 	struct Node
 	{
-		Inventory* movie; 
+		T* movie; 
 		Node* left, * right; 
 	};
 
