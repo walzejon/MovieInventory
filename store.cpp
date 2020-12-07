@@ -33,15 +33,31 @@ void Store::addMovieInventory(ifstream &infile)
     //-	For comedy movies: F, Stock, Director, Title, Year it released
     //-	For drama movies: D, Stock, Director, Title, Year it released
     //-	For classics movies: C, Stock, Director, Title, Major actor Release date
-    char const comedy = 'F';
-    char const classic = 'C';
-    char const drama = 'D';
+    string const comedy = "F,";
+    string const classic = "C,";
+    string const drama = "D,";
     for(;;)
     {
         if(infile.eof()) break;
-        char genre;
+        string genre;
         infile >> genre;
-        //if(we have no tree for genre) skip whole line and keep going OR add a new binTree with this genre?
+        if (genre == classic)
+        {
+
+        } // insert classic
+        else if (genre == comedy)
+        {
+
+        } // insert comedy
+        else if (genre == drama)
+        {
+
+        } // insert drama
+        else{
+            cout<<"[ERROR] Genre type: " << genre << " is not available" << endl;
+            string nonsense;
+            getline(infile, nonsense);
+        } // output error for invalid movie type
 
         //store genre trees in an array? so for(binTree A in arrray) {
         // if(genre == 'F') {add this movie to that binTree}
