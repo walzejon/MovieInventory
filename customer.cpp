@@ -12,7 +12,7 @@ Assignment 4
 
 Customer::Customer() : id(-1), firstName(""), lastName("")
 {
-	tranHistory.reserve(5);
+	transHistory.reserve(5);
 }
 
 
@@ -75,21 +75,21 @@ void Customer::setData(istream& readFile)
 
 // Customer History display
 
-void Customer::displayCustomerHistory() const 
+void Customer::displayCustomerHistory()
 {
 	//customer id name lastname
 	cout << " **** Customer: " << id << " " << lastName << ", " << firstName
 		<< endl;
 
-	int size = tranHistory.size();
+	int size = transHistory.size();
 
 	if (size > 0)
 	{
 		//display the transaction history
 		for (int i = 0; i < size; i++)
 		{
-			tranHistory[i].display();
-			tranHistory[i].getTitle()->display();
+			transHistory[i].display();
+			transHistory[i].getTitle()->display();
 		}
 		cout << endl;
 	}
@@ -108,7 +108,7 @@ void Customer::displayCustomerHistory() const
  
 void Customer::addTransaction(Transaction trans)
  {
-	tranHistory.push_back(trans);
+	transHistory.push_back(trans);
 }
 
 
@@ -147,7 +147,7 @@ Customer& Customer::operator=(const Customer& rightSide) {
 	this->firstName = rightSide.firstName;
 	this->lastName = rightSide.lastName;
 	for (int i = 0; i < transHistory.size(); ++i) {
-		transHistory[i] = rightSide.tranHistory[i];
+		transHistory[i] = rightSide.transHistory[i];
 	}
 	return *this;
 }

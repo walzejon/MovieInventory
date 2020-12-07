@@ -4,6 +4,7 @@
 #include "movie.h"
 #include "transaction.h"
 #include "customer.h"
+#include <iostream>
 
 class Borrow : public Transaction {
 public:
@@ -12,8 +13,6 @@ public:
 	~Borrow();
 	bool borrowMovie(string, Movie, Customer*);
 	string display() const;
-	bool hasMovie(Movie movie);
 	virtual Transaction* create();
-
 };
 #endif

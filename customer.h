@@ -31,7 +31,7 @@ public:
 	virtual ~Customer();
 
 	void setData(istream& readFile); //set the data
-	void displayCustomerHistory() const; //display customer history
+	void displayCustomerHistory(); //display customer history
 	void addTransaction(Transaction); //add transaction to specific customer
 	virtual void display() const;
 
@@ -45,7 +45,7 @@ public:
 	virtual bool operator!=(const Customer& rightSide) const; 
 	Customer& operator=(const Customer& rightSide);
 
-private:
+protected:
 
 	//id number, first name and last name for customers
 	int id;
