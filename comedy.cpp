@@ -7,8 +7,12 @@ ostream& operator<<(ostream& outputStream, Comedy& com) {
 	return outputStream;
 }
 
+void Comedy::display() {
+	cout << *this << endl;
+}
+
 int Comedy::getYearReleased() {
-	return this->getYearReleased;
+	return this->yearReleased;
 }
 
 void Comedy::setYearReleased(int year) {

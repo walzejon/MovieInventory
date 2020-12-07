@@ -38,6 +38,10 @@ int Movie::getStockOwned() {
 	return this->stockOwned;
 }
 
+int Movie::getStockDifference() {
+	return this->maxStock - this->currentStock;
+}
+
 void Movie::setStockOwned(int stockOwned) {
 	this->stockOwned = stockOwned;
 }

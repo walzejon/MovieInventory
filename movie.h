@@ -29,6 +29,8 @@ public:
     int getStockOwned();
     void setStockOwned(int stockOwned);
 
+    int getStockDifference();
+
     // Getter and Setter for title
     string getTitle();
     void setTitle(string title);
