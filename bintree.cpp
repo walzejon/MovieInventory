@@ -26,8 +26,7 @@ BinTree::~BinTree()
 //insert
 // Inserts the given/taken movie to the tree. No duplicate allowed.
 // Avoid duplicates and create a bst.
-template<typename T>
-bool BinTree<T>::insert(T* insertMovie, const int copiesIn)
+bool BinTree::insert(Movie* insertMovie, const int copiesIn)
 {
 	Node* ptr = new Node();
 	ptr->movie = insertMovie; 
@@ -107,8 +106,7 @@ void BinTree::makeEmpty()
 
 
 //destroyTree
-template<typename T>
-void BinTree<T>::destroyTree(const T& tree)
+void BinTree::destroyTree(Node*& tree)
 {
 	if (tree != NULL)
 	{
@@ -124,8 +122,7 @@ void BinTree<T>::destroyTree(const T& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-template<typename T>
-bool BinTree<T>::retrieve(const T& dataItem, T*& dataFound) const
+bool BinTree::retrieve(const Movie& dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
 
@@ -138,9 +135,8 @@ bool BinTree<T>::retrieve(const T& dataItem, T*& dataFound) const
 
 // retrieveHelper
 // A helper method for retrieve. It recursively finds the provided 
-// object in this tree. Returns NULL if the item is not found.
-template<typename T>	
-void BinTree<T>::retrieveHelper(Node* curPtr, const T& dataItem, T*& dataFound) const
+// object in this tree. Returns NULL if the item is not found.	
+void BinTree::retrieveHelper(Node* curPtr, const Movie& dataItem, Movie*& dataFound) const
 {
 	//iff current point is null and data is null
 	if (curPtr == NULL) 
@@ -183,13 +179,7 @@ void BinTree::inorderDisplay(Node* current) const
 	}
 }
 
-
-// getRoot
-// Show the root.
-/*
-template <typename T> 
-Node* BinTree<T>::getRoot() const
-{
-	return this->root;
-}
-*/
+//Node* BinTree::getRoot() 
+//{
+	//return this->root;
+//}

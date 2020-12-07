@@ -11,6 +11,7 @@ class Classic : public Movie {
 public:
     string getMARD();
     void setMARD(string);
+    void display();
     virtual bool operator<(const Classic& rightSide) const;
     virtual bool operator>(const Classic& rightSide) const;
     virtual bool operator==(const Classic& rightSide) const;

@@ -11,6 +11,7 @@ class Comedy : public Movie {
 public:
     int getYearReleased();
     void setYearReleased(int year);
+    void display();
     virtual bool operator<(const Comedy& rightSide) const;
     virtual bool operator>(const Comedy& rightSide) const;
     virtual bool operator==(const Comedy& rightSide) const;
