@@ -8,6 +8,10 @@
 #include "transaction.h"
 #include "bintree.h"
 #include "customer.h"
+#include "movie.h"
+#include "classic.h"
+#include "drama.h"
+#include "comedy.h"
 #include <iostream>
 #include <fstream>
 #include <vector>

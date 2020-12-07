@@ -46,7 +46,7 @@ void Movie::setStockOwned(int stockOwned) {
 	this->stockOwned = stockOwned;
 }
 
-string Movie::getTitle() {
+string Movie::getTitle() const {
 	return this->title;
 }
 
@@ -54,7 +54,7 @@ void Movie::setTitle(string title) {
 	this->title = title;
 }
 
-string Movie::getDirector() {
+string Movie::getDirector() const {
 	return this->director;
 }
 

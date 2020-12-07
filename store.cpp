@@ -43,12 +43,19 @@ void Store::addMovieInventory(ifstream &infile)
         infile >> genre;
         if (genre == classic)
         {
+            string stock;
+            infile >> stock;
+            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
             string director;
             infile >> director;
             string title;
             infile >> title;
             string MARD;
             infile >> MARD;
+            Classic* m = new Classic(director, title, MARD);
+            //insert movie into respective binTree;
+            C.insert(new Classic(director, title, MARD),stoi(stock));
+
         } // insert classic
         else if (genre == comedy)
         {

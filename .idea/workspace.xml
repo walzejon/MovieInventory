@@ -31,7 +31,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/classic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classic.h" beforeDir="false" afterPath="$PROJECT_DIR$/classic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/movie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie.h" beforeDir="false" afterPath="$PROJECT_DIR$/movie.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.h" beforeDir="false" afterPath="$PROJECT_DIR$/store.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +95,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="16696000" />
+      <workItem from="1607059339551" duration="18904000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -274,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607324844416</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="doCommands">
+      <created>1607327351367</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1607327351367</updated>
+    </task>
+    <task id="LOCAL-00028" summary="doCommands">
+      <created>1607327432119</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1607327432119</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,21 +327,22 @@
     <MESSAGE value="BinTree getRoot()" />
     <MESSAGE value="BinTree copies in deleted const" />
     <MESSAGE value="const shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="const shit" />
+    <MESSAGE value="doCommands" />
+    <option name="LAST_COMMIT_MESSAGE" value="doCommands" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607324844173">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607327431924">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607324844173" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607327431924" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607324847527">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607327438290">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607324847527" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607327438290" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607324917128">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
