@@ -46,7 +46,6 @@ public:
 	Customer& operator=(const Customer& rightSide);
 
 private:
-
 	//id number, first name and last name for customers
 	int id;
 	string firstName;

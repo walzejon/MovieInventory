@@ -108,7 +108,7 @@ void Customer::displayCustomerHistory() const
  
 void Customer::addTransaction(Transaction trans)
  {
-	tranHistory.push_back(trans);
+	transHistory.push_back(trans);
 }
 
 
