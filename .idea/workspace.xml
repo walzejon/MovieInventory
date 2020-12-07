@@ -30,7 +30,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bintree.h" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="11123000" />
+      <workItem from="1607059339551" duration="12953000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -210,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607319629293</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="store.cpp add customer">
+      <created>1607320033551</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1607320033551</updated>
+    </task>
+    <task id="LOCAL-00019" summary="store.cpp add customer">
+      <created>1607320187748</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1607320187748</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,24 +254,25 @@
     <MESSAGE value="same ID customer replaced" />
     <MESSAGE value="Tran history to transHistory" />
     <MESSAGE value="insert(Customer) NO int ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="insert(Customer) NO int ID" />
+    <MESSAGE value="store.cpp add customer" />
+    <option name="LAST_COMMIT_MESSAGE" value="store.cpp add customer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607319628984">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607320187309">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607319628984" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607320187309" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607319632676">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607320191978">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607319632676" />
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607319460124">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607320191978" />
+    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607321657176">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1607319460124" />
+    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1607321657176" />
   </component>
 </project>

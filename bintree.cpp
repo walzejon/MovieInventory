@@ -158,25 +158,41 @@ void BinTree::retrieveHelper(Node* curPtr, const Movie& dataItem, Movie*& dataFo
 //inorderDisplay
 // A helper method that recursively prints the tree in-order traversal	
  
-void BinTree::inorderDisplay(Node* current) const
+void BinTree::preorderDisplay(Node* current) const
 {
-	//if at the root, then show root
-	if (current == root)
+	if (current != NULL)
 	{
-		current->movie->displayHeader();
+        preorderDisplay(current->left);
+        current->movie->display();
+		preorderDisplay(current->right);
 	}
+}
 
-	//if not null, go ascending order(in order) recursively
-	if (current != NULL) 
-	{
-		inorderDisplay(current->left);
+//------------------------- displaySideways ---------------------------------
+// Displays a binary tree as though you are viewing it from the side;
+// hard coded displaying to standard output.
+// Preconditions: NONE
+// Postconditions: BinTree remains unchanged.
+void BinTree::displaySideways() const {
+    sideways(root, 0);
+}
 
-		cout << right << setw(2) << current->movie->getCurrentStock() << "  " <<
-			left << setw(3) << current->movie->setCurrentStock() << " ";
-		current->movie->display();
+//---------------------------- Sideways -------------------------------------
+// Helper method for displaySideways
+// Preconditions: NONE
+// Postconditions: BinTree remains unchanged.
+void BinTree::sideways(Node* current, int level) const {
+    if (current != nullptr) {
+        level++;
+        sideways(current->right, level);
 
-		inorderDisplay(current->right);
-	}
+        // indent for readability, 4 spaces per depth level
+        for (int i = level; i >= 0; i--) {
+            cout << "    ";
+        }
+        cout << *current->movie << endl;        // display information of object
+        sideways(current->left, level);
+    }
 }
 
 //Node* BinTree::getRoot() 
