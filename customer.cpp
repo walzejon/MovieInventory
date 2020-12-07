@@ -1,4 +1,3 @@
-
 /*
 Cindy Acevedo
 CSS 343 
