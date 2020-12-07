@@ -7,6 +7,9 @@ Assignment 4
 #ifndef BINTREE_H
 #define BINTREE_H
 #include "movie.h" //make sure to name it movie
+#include "drama.h"
+#include "comedy.h"
+#include "classic.h"
 
 class BinTree
 {
@@ -33,7 +36,7 @@ public:
 	void makeEmpty(); 
 	//retrieve movie
 	bool retrieve(const Movie&, Movie*&) const; // look at later
-	void retrieveHelper(Node* curPtr, const Movie& dataItem, Movie*& dataFound) const;
+	void retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const;
 	//displays order
 	void preorderDisplay(Node* current) const;
 	//gets the root
