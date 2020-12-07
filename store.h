@@ -28,7 +28,7 @@ public:
     void printMovies(BinTree* A);
 
 private:
-    HashTable customerTable<int ID, Customer cust>;
+    HashTable customerTable;
     BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
 };
