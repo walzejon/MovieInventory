@@ -13,9 +13,9 @@ Borrow::Borrow(const Borrow& rightSide) {
 
 Borrow::~Borrow() { }
 
-bool Borrow::borrowMovie(string media, Movie movie, Customer* cust) {
-	movie.setCurrentStock(movie.getCurrentStock() - 1);
-	movie.setStockOwned(movie.getStockOwned() + 1);
+bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
+	movie->setCurrentStock(movie->getCurrentStock() - 1);
+	movie->setStockOwned(movie->getStockOwned() + 1);
 	Transaction* trans = new Transaction();
 	trans->setTransactionType('B');
 	cust->addTransaction(*trans);

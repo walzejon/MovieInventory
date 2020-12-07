@@ -2,7 +2,7 @@
 
 ostream& operator<<(ostream& outputStream, Classic& classic) {
 	outputStream << classic.getFormat() << ", " << classic.getCurrentStock() << ", "
-		<< classic.getTitle() << ", " << classic.getDirector() << ", "
+		<< classic.getDirector() << ", " << classic.getTitle() << ", "
 		<< classic.getMARD();
 	return outputStream;
 }

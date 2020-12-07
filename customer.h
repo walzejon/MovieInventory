@@ -32,7 +32,7 @@ public:
 
 	void setData(istream& readFile); //set the data
 	void addTransaction(Transaction); //add transaction to specific customer
-	virtual void display() const;
+	virtual void display();
 
 	//getters
 	int getCustomerID() const;

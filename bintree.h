@@ -33,7 +33,6 @@ public:
 	void makeEmpty(); 
 	//retrieve movie
 	bool retrieve(Movie&, Movie*&) const; // look at later
-	void retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const;
 	//displays order
 	void preorderDisplay(Node* current) const;
 	//gets the root
@@ -41,6 +40,7 @@ public:
 	void displaySideways() const;
 
 private:
+	void retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const;
 	//helper method to destroy the tree
 	void destroyTree(Node*&);
 	void sideways(Node* current, int level) const;

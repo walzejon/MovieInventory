@@ -11,7 +11,7 @@ public:
 	Borrow();
 	Borrow(const Borrow&);
 	~Borrow();
-	bool borrowMovie(string, Movie, Customer*);
+	bool borrowMovie(string, Movie*, Customer*);
 	string display() const;
 	virtual Transaction* create();
 };

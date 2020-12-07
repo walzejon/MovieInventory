@@ -1,4 +1,3 @@
-
 /*
 Cindy Acevedo
 CSS 343 
@@ -113,8 +112,8 @@ void Customer::addTransaction(Transaction trans)
 
 // display (customer history)
  
-void Customer::display() const
- {
+void Customer::display() 
+{
 	displayCustomerHistory();
 }
 
