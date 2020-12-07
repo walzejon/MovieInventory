@@ -51,7 +51,7 @@ private:
 	int id;
 	string firstName;
 	string lastName;
-	vector<Transaction> tranHistory; //for customer trasaction history
+	vector<Transaction> transHistory; //for customer trasaction history
 };
 
 #endif
