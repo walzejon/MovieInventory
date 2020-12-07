@@ -140,7 +140,7 @@ bool Customer::operator==(const Customer& rightSide) const
 bool Customer::operator!=(const Customer& rightSide) const
  {
 	return (id != rightSide.id);
-}
+ }
 
 Customer& Customer::operator=(const Customer& rightSide) {
 	this->id = rightSide.id;

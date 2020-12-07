@@ -19,9 +19,9 @@ int HashTable::hashFunction(int ID)
     return ID % hashGroup;
 }
 
-void HashTable::insertItem(int ID, Customer cust) // should i require the user to input an ID or just call cust.id??
+void HashTable::insertItem(Customer cust) // should i require the user to input an ID or just call cust.id??
 {                                  // idk if cust should be a reference or not
-    int hashValue = hashFunction(ID);
+    int hashValue = hashFunction(cust.getCustomerID());
     auto& cell = table[hashValue];
     bool keyExists = false;
     auto iter = begin(cell);

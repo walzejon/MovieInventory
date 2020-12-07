@@ -20,7 +20,7 @@ public:
     HashTable();
     ~HashTable();
     int hashFunction(int ID);
-    void insertItem(int, Customer);
+    void insertItem(Customer);
     void removeItem(int ID);
     //bool containsKey(int ID);
     Customer get(int ID);
