@@ -10,7 +10,7 @@ Assignment 4
 
 // Default contructor
 
-Customer::Customer() : id(-1), firstName(""), lastName("")
+Customer::Customer() : id(0), firstName(""), lastName("")
 {
 	transHistory.reserve(5);
 }
