@@ -26,7 +26,7 @@ BinTree::~BinTree()
 //insert
 // Inserts the given/taken movie to the tree. No duplicate allowed.
 // Avoid duplicates and create a bst.
-bool BinTree::insert(Movie* insertMovie, const int copiesIn)
+bool BinTree::insert(Movie* insertMovie, int copiesIn)
 {
 	Node* ptr = new Node();
 	ptr->movie = insertMovie; 

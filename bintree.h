@@ -26,7 +26,7 @@ public:
 	~BinTree();
 
 	//insert movie 
-	bool insert(Movie* insertMovie, const int copiesIn);
+	bool insert(Movie* insertMovie, int copiesIn);
 	//check if empty
 	bool isEmpty() const;
 
