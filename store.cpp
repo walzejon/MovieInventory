@@ -43,7 +43,12 @@ void Store::addMovieInventory(ifstream &infile)
         infile >> genre;
         if (genre == classic)
         {
-
+            string director;
+            infile >> director;
+            string title;
+            infile >> title;
+            string MARD;
+            infile >> MARD;
         } // insert classic
         else if (genre == comedy)
         {
