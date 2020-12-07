@@ -139,7 +139,7 @@ bool BinTree::retrieve( Movie& dataItem, Movie*& dataFound) const
 void BinTree::retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const
 {
 	//iff current point is null and data is null
-	if (curPtr == NULL) 
+	if (curPtr == NULL)
 		dataFound = NULL;
 
 	//if found, then assign it 
