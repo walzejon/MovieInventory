@@ -24,13 +24,7 @@ void Store::addCustomers(ifstream &infile)
         infile >> ID;
         infile >> firstName;
         infile >> lastName;
-<<<<<<< HEAD
         customerTable.insertItem(Customer(ID, firstName, lastName));
-        //HashTable.add(ID,Customer(ID, fistName,lastName));    - should i parse files here or let customer constructor do that?
-=======
-
-        //HashTable.insetItem(Customer(ID, fistName,lastName));
->>>>>>> 8b362b5a875befc641878c9143d57b64f1d8b3b3
     }
 }
 
