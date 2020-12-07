@@ -30,10 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/customer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="10798000" />
+      <workItem from="1607059339551" duration="11123000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -206,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607305811466</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="insert(Customer) NO int ID">
+      <created>1607319629293</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1607319629293</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,21 +237,22 @@
     <MESSAGE value="hashTable updates" />
     <MESSAGE value="same ID customer replaced" />
     <MESSAGE value="Tran history to transHistory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tran history to transHistory" />
+    <MESSAGE value="insert(Customer) NO int ID" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert(Customer) NO int ID" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607305811202">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607319628984">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607305811202" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607319628984" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607305815853">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607319632676">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607305815853" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607319632676" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607319460124">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
