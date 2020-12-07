@@ -44,13 +44,7 @@ public:
 	virtual bool operator==(const Customer& rightSide) const; 
 	virtual bool operator!=(const Customer& rightSide) const; 
 	Customer& operator=(const Customer& rightSide);
-
-<<<<<<< HEAD
-protected:
-
-=======
 private:
->>>>>>> da956d9dad7d842a969b9e48526a86b9f0f2d731
 	//id number, first name and last name for customers
 	int id;
 	string firstName;
