@@ -45,10 +45,11 @@ public:
 
     virtual void display();
 
-    virtual bool operator==(const Movie&);
-    virtual bool operator!=(const Movie&);
-    virtual bool operator<(const Movie&);
-    virtual bool operator>(const Movie&);
+    virtual bool operator==(const Movie&) = 0;
+    virtual bool operator!=(const Movie&) = 0;
+    virtual bool operator<(const Movie&) = 0;
+    virtual bool operator>(const Movie&) = 0;
+
 protected:
     string movieFormat;
     int currentStock;
