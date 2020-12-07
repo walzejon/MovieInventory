@@ -9,13 +9,14 @@
 class Classic : public Movie {
     friend ostream& operator<<(ostream& outputStream, Classic& classic);
 public:
-    string getMARD();
+    Classic(string di, string tit, string mard);
+    string getMARD() const;
     void setMARD(string);
     void display();
     virtual bool operator<(const Classic& rightSide) const;
-    virtual bool operator>(const Classic& rightSide) const;
-    virtual bool operator==(const Classic& rightSide) const;
-    virtual bool operator!=(const Classic& rightSide) const;
+    virtual bool operator>(const Movie& rightSide) const;
+    virtual bool operator==(const Movie& rightSide) const;
+    virtual bool operator!=(const Movie& rightSide) const;
 private:
     string MARD;
 };

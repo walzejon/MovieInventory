@@ -32,11 +32,11 @@ public:
     int getStockDifference();
 
     // Getter and Setter for title
-    string getTitle();
+    string getTitle() const;
     void setTitle(string title);
 
     // Getter and Setter for director
-    string getDirector();
+    string getDirector() const;
     void setDirector(string director);
 
     // Getter and Setter for maxStock
@@ -45,10 +45,10 @@ public:
 
     virtual void display();
 
-    virtual bool operator==(const Movie&) = 0;
-    virtual bool operator!=(const Movie&) = 0;
-    virtual bool operator<(const Movie&) = 0;
-    virtual bool operator>(const Movie&) = 0;
+    virtual bool operator==(Movie&) const = 0;
+    virtual bool operator!=(Movie&) const = 0;
+    virtual bool operator<(Movie&) const = 0;
+    virtual bool operator>(Movie&) const = 0;
 
 protected:
     string movieFormat;
