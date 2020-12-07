@@ -26,7 +26,7 @@ BinTree::~BinTree()
 //insert
 // Inserts the given/taken movie to the tree. No duplicate allowed.
 // Avoid duplicates and create a bst.
-bool BinTree::insert(Movie* insertMovie, const int copiesIn)
+bool BinTree::insert(Movie* insertMovie, int copiesIn)
 {
 	Node* ptr = new Node();
 	ptr->movie = insertMovie; 
@@ -122,7 +122,7 @@ void BinTree::destroyTree(Node*& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-bool BinTree::retrieve( Movie& dataItem, Movie*& dataFound) const
+bool BinTree::retrieve(Movie& dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
 
@@ -193,9 +193,4 @@ void BinTree::sideways(Node* current, int level) const {
         cout << *current->movie << endl;        // display information of object
         sideways(current->left, level);
     }
-}
-
-BinTree::Node* BinTree::getRoot()
-{
-	return this->root;
 }

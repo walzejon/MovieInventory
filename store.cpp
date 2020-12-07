@@ -52,7 +52,7 @@ void Store::addMovieInventory(ifstream &infile)
 //preorder print
 void Store::printMovies(BinTree* A)
 {
-    A->inorderDisplay(A->getRoot());
+    A->preorderDisplay(A->getRoot());
 }
 
 void Store::doCommands(ifstream &infile)

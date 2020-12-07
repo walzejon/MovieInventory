@@ -89,7 +89,6 @@ void Customer::displayCustomerHistory()
 		for (int i = 0; i < size; i++)
 		{
 			transHistory[i].display();
-			transHistory[i].getTitle()->display();
 		}
 		cout << endl;
 	}
@@ -114,8 +113,8 @@ void Customer::addTransaction(Transaction trans)
 
 // display (customer history)
  
-void Customer::display() const
- {
+void Customer::display() 
+{
 	displayCustomerHistory();
 }
 
