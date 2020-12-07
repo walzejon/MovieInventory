@@ -33,7 +33,11 @@ public:
 	void makeEmpty(); 
 	//retrieve movie
 <<<<<<< HEAD
+<<<<<<< HEAD
 	bool retrieve(const Movie&, Movie*&) const; // look at later
+=======
+	bool retrieve(Movie&, Movie*&) const; // look at later
+>>>>>>> fe92cd0af18e4934b1f38c882724acb3b3bc2a6d
 =======
 	bool retrieve(Movie&, Movie*&) const; // look at later
 >>>>>>> fe92cd0af18e4934b1f38c882724acb3b3bc2a6d
