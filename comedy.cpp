@@ -41,7 +41,7 @@ bool Comedy::operator>(const Comedy& rightSide) const {
 
 bool Comedy::operator==(const Comedy& rightSide) const {
 	return (this->director.compare(rightSide.director) == 0 && this->title.compare(rightSide.title)
-		== 0 && this->yearReleased == rightSide.yearReleased;
+		== 0 && this->yearReleased == rightSide.yearReleased);
 }
 
 bool Comedy::operator!=(const Comedy& rightSide) const {
