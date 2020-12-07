@@ -7,6 +7,10 @@ ostream& operator<<(ostream& outputStream, Classic& classic) {
 	return outputStream;
 }
 
+void Classic::display() {
+	cout << *this << endl;
+}
+
 string Classic::getMARD() {
 	return this->MARD;
 }

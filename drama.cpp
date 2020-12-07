@@ -7,6 +7,10 @@ ostream& operator<<(ostream& outputStream, Drama& drama) {
 	return outputStream;
 }
 
+void Drama::display() {
+	cout << *this << endl;
+}
+
 int Drama::getYearReleased() {
 	return this->yearReleased;
 }
