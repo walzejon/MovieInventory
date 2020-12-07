@@ -9,7 +9,7 @@ public:
 	Return();
 	Return(const Return&);
 	~Return();
-	bool returnMovie(string, Movie, Customer*);
+	bool returnMovie(string, Movie*, Customer*);
 	string display() const;
 	virtual Transaction* create();
 };
