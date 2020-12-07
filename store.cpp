@@ -25,7 +25,7 @@ void Store::addCustomers(ifstream &infile)
         infile >> firstName;
         infile >> lastName;
 
-        //HashTable.add(ID,Customer(ID, fistName,lastName));    - should i parse files here or let customer constructor do that?
+        //HashTable.insetItem(Customer(ID, fistName,lastName));
     }
 }
 
@@ -43,6 +43,7 @@ void Store::addMovieInventory(ifstream &infile)
         char genre;
         infile >> genre;
         //if(we have no tree for genre) skip whole line and keep going OR add a new binTree with this genre?
+
         //store genre trees in an array? so for(binTree A in arrray) {
         // if(genre == 'F') {add this movie to that binTree}
     }
