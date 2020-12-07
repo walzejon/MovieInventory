@@ -122,7 +122,7 @@ void BinTree::destroyTree(Node*& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-bool BinTree::retrieve(const Movie& dataItem, Movie*& dataFound) const
+bool BinTree::retrieve( Movie& dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
 
@@ -195,7 +195,7 @@ void BinTree::sideways(Node* current, int level) const {
     }
 }
 
-//Node* BinTree::getRoot() 
-//{
-	//return this->root;
-//}
+BinTree::Node* BinTree::getRoot()
+{
+	return this->root;
+}
