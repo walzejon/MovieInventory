@@ -9,7 +9,7 @@ public:
 	Transaction();
 	~Transaction();
 	void setTransactionType(char);
-	void display();
+	void display() const;
 protected:
 	int transactionID;
 	char transactionType;

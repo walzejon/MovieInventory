@@ -9,6 +9,6 @@ void Transaction::setTransactionType(char transType) {
 	this->transactionType = transType;
 }
 
-void Transaction::display() {
+void Transaction::display() const{
 	cout << this->mediaType << " " << transactionType;
 }

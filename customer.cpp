@@ -75,7 +75,7 @@ void Customer::setData(istream& readFile)
 
 // Customer History display
 
-void Customer::displayCustomerHistory()
+void Customer::displayCustomerHistory() const
 {
 	//customer id name lastname
 	cout << " **** Customer: " << id << " " << lastName << ", " << firstName
@@ -89,7 +89,6 @@ void Customer::displayCustomerHistory()
 		for (int i = 0; i < size; i++)
 		{
 			transHistory[i].display();
-			transHistory[i].getTitle()->display();
 		}
 		cout << endl;
 	}
