@@ -75,7 +75,7 @@ void Customer::setData(istream& readFile)
 
 // Customer History display
 
-void Customer::displayCustomerHistory()
+void Customer::displayCustomerHistory() const
 {
 	//customer id name lastname
 	cout << " **** Customer: " << id << " " << lastName << ", " << firstName
