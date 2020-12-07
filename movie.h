@@ -37,12 +37,17 @@ public:
     string getDirector();
     void setDirector(string director);
 
+    // Getter and Setter for maxStock
+    int getMaxStock();
+    void setMaxStock(int stock);
+
 protected:
     string movieFormat;
     int currentStock;
     int stockOwned;
     string title;
     string director;
+    int maxStock;
 };
 
 

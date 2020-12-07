@@ -1,4 +1,5 @@
 #include "borrow.h"
+#include "bintree.h"
 
 Borrow::Borrow() { transactionType = 'B'; }
 
@@ -31,7 +32,11 @@ string Borrow::display() const {
 }
 
 bool Borrow::hasMovie(Movie movie) {
-	
+	BinTree<Movie>* ch = new BinTree<Movie>();
+	if (ch->isEmpty()) return false;
+	else {
+
+	}
 }
 
 Transaction* Borrow::create() {

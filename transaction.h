@@ -10,6 +10,7 @@ protected:
 	int transactionID;
 	char transactionType;
 	string movieType;
+	string mediaType;
 	bool hasBeenBorrowed;
 };
 

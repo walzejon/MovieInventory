@@ -13,6 +13,7 @@ Movie::Movie() {
 	this->stockOwned = 0;
 	this->title = "";
 	this->director = "";
+	this->maxStock = 0;
 }
 
 Movie::~Movie() { }
@@ -55,4 +56,12 @@ string Movie::getDirector() {
 
 void Movie::setDirector(string director) {
 	this->director = director;
+}
+
+int Movie::getMaxStock() {
+	return this->maxStock;
+}
+
+void Movie::setMaxStock(int maxStock) {
+	this->maxStock = maxStock;
 }

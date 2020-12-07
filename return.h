@@ -11,6 +11,6 @@ public:
 	~Return();
 	bool returnMovie(string, Movie, Customer*);
 	string display() const;
-	virtual Transaction* create()
+	virtual Transaction* create();
 };
 #endif

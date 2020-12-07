@@ -13,7 +13,7 @@ public:
 	bool borrowMovie(string, Movie, Customer*);
 	string display() const;
 	bool hasMovie(Movie movie);
-	virtual Transaction* create()
+	virtual Transaction* create();
 
 };
 #endif
