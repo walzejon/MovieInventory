@@ -34,12 +34,14 @@ public:
 	//retrieve movie
 	bool retrieve(const Movie&, Movie*&) const; // look at later
 	void retrieveHelper(Node* curPtr, const Movie& dataItem, Movie*& dataFound) const;
-	//displays in order
-	void inorderDisplay(Node* current) const;
+	//displays order
+	void preorderDisplay(Node* current) const;
 	//gets the root
 	Node* getRoot();
+	void displaySideways() const;
 private:
 	//helper method to destroy the tree
 	void destroyTree(Node*&);
+	void sideways(Node* current, int level) const;
 };
 #endif
