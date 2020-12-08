@@ -7,7 +7,7 @@ ostream& operator<<(ostream& outputStream, Comedy& com) {
 	return outputStream;
 }
 
-void Comedy::display() {
+void Comedy::display() const {
 	cout << *this << endl;
 }
 

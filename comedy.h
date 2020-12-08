@@ -12,7 +12,7 @@ public:
     Comedy(string direc, string tit, int yearR);
     int getYearReleased() const;
     void setYearReleased(int year);
-    void display();
+    void display() const;
     virtual bool isClassic() const;
     virtual bool isDrama() const;
     virtual bool isComedy() const;

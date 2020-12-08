@@ -7,7 +7,7 @@ ostream& operator<<(ostream& outputStream, Classic& classic) {
 	return outputStream;
 }
 
-void Classic::display() {
+void Classic::display() const {
 	cout << *this << endl;
 }
 
