@@ -173,9 +173,17 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string director, title;
             infile >> director;
             infile >> title;
-            
+
+            //                         create this constructor
+            //Drama* searchMovie = new Drama(director, title);
+
             //find movie in binTree
-            //borrow(borrower, director, title);
+
+            //Drama* dataFound = new Drama();
+            //D.retrieve(searchMovie, dataFound);
+
+
+            //borrow(borrower, dataFound);
         }
         case 'F': {
             string title;
