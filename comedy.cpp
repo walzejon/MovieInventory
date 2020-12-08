@@ -11,7 +11,7 @@ void Comedy::display() {
 	cout << *this << endl;
 }
 
-int Comedy::getYearReleased() {
+int Comedy::getYearReleased() const {
 	return this->yearReleased;
 }
 
@@ -20,30 +20,50 @@ void Comedy::setYearReleased(int year) {
 }
 
 bool Comedy::operator<(const Comedy& rightSide) const {
-	if (this->director.compare(rightSide.director) != 0) {
-		return this->director.compare(rightSide.director) < 0;
-		if (this->title.compare(rightSide.title) != 0) {
-			return this->title.compare(rightSide.title) < 0;
+    if(!rightSide.isComedy()) return false;
+    const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
+	if (this->director.compare(otherComedy->getDirector()) != 0) {
+		return this->director.compare(otherComedy->getDirector()) < 0;
+		if (this->title.compare(otherComedy->getTitle()) != 0) {
+			return this->title.compare(otherComedy->getTitle()) < 0;
 		}
 	}
 	return false;
 }
 
 bool Comedy::operator>(const Comedy& rightSide) const {
-	if (this->director.compare(rightSide.director) != 0) {
-		return this->director.compare(rightSide.director) > 0;
-		if (this->title.compare(rightSide.title) != 0) {
-			return this->title.compare(rightSide.title) > 0;
+    if(!rightSide.isComedy()) return false;
+    const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
+	if (this->director.compare(otherComedy->getDirector()) != 0) {
+		return this->director.compare(otherComedy->getDirector()) > 0;
+		if (this->title.compare(otherComedy->getTitle()) != 0) {
+			return this->title.compare(otherComedy->getTitle()) > 0;
 		}
 	}
 	return false;
 }
 
 bool Comedy::operator==(const Comedy& rightSide) const {
-	return (this->director.compare(rightSide.director) == 0 && this->title.compare(rightSide.title)
-		== 0 && this->yearReleased == rightSide.yearReleased);
+    if(!rightSide.isComedy()) return false;
+    const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
+	return (this->director.compare(otherComedy->getDirector()) == 0 && this->title.compare(otherComedy->getTitle())
+		== 0 && this->yearReleased == otherComedy->getYearReleased());
 }
 
 bool Comedy::operator!=(const Comedy& rightSide) const {
-	return !(*this == rightSide);
+    if(!rightSide.isComedy()) return false;
+    const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
+	return !(*this == *otherComedy);
+}
+
+bool Comedy::isClassic() const {
+    return false;
+}
+
+bool Comedy::isDrama() const {
+    return false;
+}
+
+bool Comedy::isComedy() const {
+    return true;
 }

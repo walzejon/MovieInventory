@@ -9,9 +9,12 @@
 class Drama : public Movie {
     friend ostream& operator<<(ostream& outputStream, Drama& drama);
 public:
-    int getYearReleased();
+    int getYearReleased() const;
     void setYearReleased(int year);
     void display();
+    virtual bool isClassic() const;
+    virtual bool isDrama() const;
+    virtual bool isComedy() const;
     virtual bool operator<(const Drama& rightSide) const;
     virtual bool operator>(const Drama& rightSide) const;
     virtual bool operator==(const Drama& rightSide) const;
