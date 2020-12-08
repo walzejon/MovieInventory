@@ -9,6 +9,7 @@
 class Comedy : public Movie {
     friend ostream& operator<<(ostream& outputStream, Comedy& com);
 public:
+    Comedy();
     Comedy(string direc, string tit, int yearR);
     int getYearReleased() const;
     void setYearReleased(int year);

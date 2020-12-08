@@ -7,6 +7,19 @@ ostream& operator<<(ostream& outputStream, Classic& classic) {
 	return outputStream;
 }
 
+Classic::Classic() {
+	this->director = "";
+	this->title = "";
+	this->MARD = "";
+}
+
+Classic::Classic(string di, string tit, string mard)
+{
+	MARD = mard;
+	director = di;
+	title = tit;
+}
+
 void Classic::display() {
 	cout << *this << endl;
 }
@@ -64,13 +77,6 @@ bool Classic::operator!=(const Movie& rightSide) const {
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
 	return !(*this == *otherClassic);
-}
-
-Classic::Classic(string di, string tit, string mard)
-{
-    MARD = mard;
-    director = di;
-    title = tit;
 }
 
 bool Classic::isClassic() const {
