@@ -152,7 +152,6 @@ void BinTree::retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) c
 	//otherwise check recursivly every child
 	else if (dataItem < *curPtr->movie)
 		retrieveHelper(curPtr->left, dataItem, dataFound);
-
 	else
 		retrieveHelper(curPtr->right, dataItem, dataFound);
 }
