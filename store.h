@@ -29,11 +29,12 @@ public:
     //void newMoviestock(); idk if we need this
     void printCustomers();
     void printHistory();
-    void borrowMovie(char movieGenre, string movieData);
     void showStock() const;
     void printMoviesSideways(BinTree* A) const;
 
 private:
+    void borrowMovie(Customer borrower, char movieGenre, ifstream infile);
+
     HashTable customerTable;
     BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
