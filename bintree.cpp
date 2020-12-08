@@ -12,7 +12,10 @@ BinTree::BinTree() : root(NULL) {}
 
 
 //copy constructor
-BinTree::BinTree(const BinTree& rightSide) {}
+BinTree::BinTree(const BinTree& rightSide) {
+	this->root = nullptr;
+	*this = rightSide;
+}
 
 
 //destructor
