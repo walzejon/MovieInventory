@@ -177,9 +177,15 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             infile >> title;
             infile >> year;
 
-            //find movie in binTree
+        string director;
+        string title;
+        infile >> director;
+        infile >> title;
 
-            //borrow(borrower, title, year);
+        //find movie in binTree
+
+        //borrow(borrower, director, title);
+
         }
         case 'C': {
             int month, year;
