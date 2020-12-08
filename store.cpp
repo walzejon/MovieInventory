@@ -163,6 +163,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
     if(movieGenre == 'D')
     {
+
         string director;
         string title;
         infile >> director;
