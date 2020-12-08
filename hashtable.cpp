@@ -88,7 +88,7 @@ Customer HashTable::get(int ID) {
     {
         if(iter->getCustomerID() == ID) {
             foundCustomer = true;
-            findMe = iter;
+            findMe = *iter;
             break;
         }
     }
