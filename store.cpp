@@ -176,6 +176,7 @@ void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
 
         //borrow(borrower, month, year, MA);
     }
+<<<<<<< HEAD
     if(movieGenre == 'D' || movieGenre == 'F')
     {
         //parse data and borrow movie
@@ -183,4 +184,6 @@ void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
     {
         //parse data and borrow movie
     }
+=======
+>>>>>>> c5d597b5cfee4cccef0b812659452317387c29a6
 }
