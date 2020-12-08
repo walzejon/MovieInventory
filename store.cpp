@@ -145,8 +145,17 @@ void Store::doCommands(ifstream &infile)
             borrowMovie(thisCust, movieGenre, infile);
 
         }
-        else if (command == 'H') {} //do H
-        else if (command == 'R') {} // do R
+        else if (command == 'H')
+        {
+            int id;
+            infile >> id;
+            Customer* custy = customerTable.get(id);
+            custy->display();
+        } //do H
+        else if (command == 'R')
+        {
+
+        } // do R
         else{
             //invalid action code
         }
