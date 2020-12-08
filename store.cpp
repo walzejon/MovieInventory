@@ -155,6 +155,3 @@ void Store::borrowMovie(char movieGenre, string movieData)
         //parse data and borrow movie
     }
 }
-
-
-
