@@ -177,7 +177,8 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string director, title;
             infile >> director;
             infile >> title;
-            
+            Movie* m = new Movie(director, title);
+            m->display();
             //find movie in binTree
             //borrow(borrower, director, title);
         }

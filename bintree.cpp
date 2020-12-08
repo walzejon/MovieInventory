@@ -128,12 +128,13 @@ void BinTree::destroyTree(Node*& tree)
 bool BinTree::retrieve(Movie& dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
-
+	
 	if (dataFound != NULL)
 		return true;
 	else
 		return false;
 } 
+
 
 
 // retrieveHelper

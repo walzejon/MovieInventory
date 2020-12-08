@@ -15,6 +15,8 @@ class Movie {
 public:
     // Constructor & Destructor
     Movie();
+    Movie(string, string);
+    Movie(string, int);
     ~Movie();
 
     // Getter and Setter for movieFormat
@@ -60,6 +62,7 @@ protected:
     int stockOwned;
     string title;
     string director;
+    int year;
     int maxStock;
 };
 

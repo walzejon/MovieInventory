@@ -16,6 +16,16 @@ Movie::Movie() {
 	this->maxStock = 0;
 }
 
+Movie::Movie(string director, string title) {
+	this->director = director;
+	this->title = title;
+}
+
+Movie::Movie(string title, int year) {
+	this->title = title;
+	this->year = year;
+}
+
 Movie::~Movie() { }
 
 string Movie::getFormat() {
