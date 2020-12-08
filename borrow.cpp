@@ -24,6 +24,10 @@ bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 	return true;
 }
 
+bool Borrow::borrowDrama(string director, string title) {
+
+}
+
 string Borrow::display() const {
 	cout << movieType << " " << transactionType << " " << endl;
 }

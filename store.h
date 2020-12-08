@@ -12,6 +12,8 @@
 #include "classic.h"
 #include "drama.h"
 #include "comedy.h"
+#include "borrow.h"
+#include "return.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
