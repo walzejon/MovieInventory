@@ -42,6 +42,7 @@ public:
 	string getLastName() const;
 
 	//operator overloads for comparison
+	//commit count ++
 	bool operator==(const Customer& rightSide) const;
 	bool operator!=(const Customer& rightSide) const;
 	Customer& operator=(const Customer& rightSide);

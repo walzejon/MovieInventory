@@ -29,10 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +87,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="32097000" />
+      <workItem from="1607059339551" duration="32397000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -372,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607413327373</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="hashtable error fixed">
+      <created>1607467852998</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1607467852998</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +394,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed hash" />
     <MESSAGE value="updated hash" />
     <MESSAGE value="Customer constructor updated" />
     <MESSAGE value="hashTable update of clear and constructors" />
@@ -415,21 +418,24 @@
     <MESSAGE value="do Commands - borrow movie setup" />
     <MESSAGE value="FIXED Store" />
     <MESSAGE value="add error" />
-    <option name="LAST_COMMIT_MESSAGE" value="add error" />
+    <MESSAGE value="hashtable error fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="hashtable error fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607413327084">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="264" y="23" key="CommitChangelistDialog2" timestamp="1607467852670">
+      <screen x="45" y="23" width="1235" height="777" />
     </state>
     <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607413327084" />
+    <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607467852670" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607412056433">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="277" y="159" key="Vcs.Push.Dialog.v2" timestamp="1607467855769">
+      <screen x="45" y="23" width="1235" height="777" />
     </state>
     <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607412056433" />
+    <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607467855769" />
     <state x="468" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607466957070">
       <screen x="45" y="23" width="1235" height="777" />
     </state>
