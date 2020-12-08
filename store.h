@@ -33,7 +33,7 @@ public:
     void printMoviesSideways(BinTree* A) const;
 
 private:
-    void borrowMovie(Customer borrower, char movieGenre, ifstream infile);
+    void borrowMovie(Customer borrower, char movieGenre, ifstream& infile);
 
     HashTable customerTable;
     BinTree F, D, C; //Comedy, Drama, Classic

@@ -91,7 +91,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="28435000" />
+      <workItem from="1607059339551" duration="29191000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -338,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607408154197</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="do Commands - borrow movie setup">
+      <created>1607410315777</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1607410315777</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,21 +385,22 @@
     <MESSAGE value="makeMovieInventory Complete" />
     <MESSAGE value="display is const" />
     <MESSAGE value="do Commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="do Commands" />
+    <MESSAGE value="do Commands - borrow movie setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="do Commands - borrow movie setup" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607408153998">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607410315285">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607408153998" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607410315285" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607408156444">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607410317774">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607408156444" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607410317774" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607399983427">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
