@@ -151,7 +151,8 @@ void Store::doCommands(ifstream &infile)
             infile >> id;
             Customer* custy = customerTable.get(id);
             custy->display();
-        } //do H
+
+        }
         else if (command == 'R')
         {
 
