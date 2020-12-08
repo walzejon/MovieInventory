@@ -44,7 +44,7 @@ private:
 	void retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const;
 	//helper method to destroy the tree
 	void destroyTree(Node*&);
-    void preorderDisplayHelper(Node* current) const;
+	void preorderDisplayHelper(Node* current) const;
 	void sideways(Node* current, int level) const;
 };
 #endif

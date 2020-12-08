@@ -154,7 +154,6 @@ void BinTree::retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) c
 		retrieveHelper(curPtr->right, dataItem, dataFound);
 }
 
-
 void BinTree::preorderDisplay() const
 {
     preorderDisplayHelper(root);
