@@ -161,8 +161,21 @@ void Store::printMoviesSideways(BinTree *A) const
 
 void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
-    if(movieGenre == 'D')
+    switch (movieGenre) 
     {
+        case 'D': {
+            string director, title;
+            infile >> director;
+            infile >> title;
+            
+            //find movie in binTree
+            //borrow(borrower, director, title);
+        }
+        case 'F': {
+            string title;
+            int year;
+            infile >> title;
+            infile >> year;
 
         string director;
         string title;
@@ -173,30 +186,18 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 
         //borrow(borrower, director, title);
 
+        }
+        case 'C': {
+            int month, year;
+            string MA;
 
-    } else if (movieGenre == 'F')
-    {
-        string title;
-        int year;
-        infile >> title;
-        infile >> year;
+            infile >> month;
+            infile >> year;
+            getline(infile, MA);
 
-        //find movie in binTree
+            //find movie in binTree
 
-        //borrow(borrower, title, year);
-
-    } else if (movieGenre == 'C')
-    {
-        int month;
-        int year;
-        string MA;
-
-        infile >> month;
-        infile >> year;
-        getline(infile, MA);
-
-        //find movie in binTree
-
-        //borrow(borrower, month, year, MA);
+            //borrow(borrower, title, year);
+        }
     }
 }

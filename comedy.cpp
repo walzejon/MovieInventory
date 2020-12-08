@@ -2,7 +2,7 @@
 
 ostream& operator<<(ostream& outputStream, Comedy& com) {
 	outputStream << com.getFormat() << ", " << com.getCurrentStock() << ", "
-		<< com.getTitle() << ", " << com.getDirector() << ", " 
+		<< com.getDirector() << ", " << com.getTitle() << ", " 
 		<< com.getYearReleased();
 	return outputStream;
 }
@@ -35,10 +35,10 @@ void Comedy::setYearReleased(int year) {
 bool Comedy::operator<(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
-	if (this->director.compare(otherComedy->getDirector()) != 0) {
+	if (this->director.compare(otherComedy->getTitle()) != 0) {
 		return this->director.compare(otherComedy->getDirector()) < 0;
-		if (this->title.compare(otherComedy->getTitle()) != 0) {
-			return this->title.compare(otherComedy->getTitle()) < 0;
+		if (this->yearReleased == (otherComedy->getYearReleased()) != 0) {
+			return this->yearReleased == (otherComedy->getYearReleased()) < 0;
 		}
 	}
 	return false;
