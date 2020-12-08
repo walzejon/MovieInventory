@@ -11,11 +11,15 @@ int main() {
  
 Store a;
 
-//ifstream customerFile("data4customer.txt");
+ifstream customers("data4customer.txt");
+ifstream commands("data4commands.txt");
+ifstream movies("data4movies.txt");
 
-//a.readCommands(doCommands); //readFile
+a.addMovieInventory(movies);
+a.addCustomers(customers);
+a.doCommands(commands);
 
-a.doCommands();
+a.doCommands(commands);
 
 return 0;
 

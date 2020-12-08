@@ -36,6 +36,7 @@ public:
 
 private:
     void borrowMovie(Customer* borrower, char movieGenre, ifstream& infile);
+    void returnMovie(Customer* cust, char movieGenre, ifstream& infile);
 
     HashTable customerTable;
     BinTree F, D, C; //Comedy, Drama, Classic

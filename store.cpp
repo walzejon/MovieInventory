@@ -111,8 +111,8 @@ void Store::doCommands(ifstream &infile)
         if(infile.eof()) break;
         char command;
         infile >> command;
-        if (command == 'I') {showStock();}
-        else if (command == 'B')
+        if (command == 'I') {showStock();} //Show inventory
+        else if (command == 'B'|| command == 'R') //Going to borrow or return movie
         {
             int ID;
             infile >> ID;
@@ -142,10 +142,10 @@ void Store::doCommands(ifstream &infile)
                 cout << "[ERROR] INVALID GENRE: " << movieGenre << endl;
                 continue;
             }
-            borrowMovie(thisCust, movieGenre, infile);
-
+            if(command == 'B') borrowMovie(thisCust, movieGenre, infile);
+            else if (command == 'R') returnMovie(thisCust, movieGenre, infile);
         }
-        else if (command == 'H')
+        else if (command == 'H') // Show history of customer
         {
             int id;
             infile >> id;
@@ -153,10 +153,6 @@ void Store::doCommands(ifstream &infile)
             custy->display();
 
         }
-        else if (command == 'R')
-        {
-
-        } // do R
         else{
             //invalid action code
         }
@@ -177,10 +173,22 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string director, title;
             infile >> director;
             infile >> title;
+<<<<<<< HEAD
             Movie* m = new Movie(director, title);
             m->display();
+=======
+
+            //                         create this constructor
+            //Drama* searchMovie = new Drama(director, title);
+
+>>>>>>> 13bc5c13c5609fa447fb902dc46037619f6a9808
             //find movie in binTree
-            //borrow(borrower, director, title);
+
+            //Drama* dataFound = new Drama();
+            //D.retrieve(searchMovie, dataFound);
+
+
+            //borrow(borrower, dataFound);
         }
         case 'F': {
             string title;
@@ -205,4 +213,9 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             //borrow(borrower, title, year);
         }
     }
+}
+
+void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
+{
+
 }
