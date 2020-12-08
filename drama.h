@@ -9,6 +9,7 @@
 class Drama : public Movie {
     friend ostream& operator<<(ostream& outputStream, Drama& drama);
 public:
+    Drama();
     Drama(string direc, string tit, int yearR);
     int getYearReleased() const;
     void setYearReleased(int year);

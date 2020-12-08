@@ -7,6 +7,18 @@ ostream& operator<<(ostream& outputStream, Drama& drama) {
 	return outputStream;
 }
 
+Drama::Drama() {
+	this->director = "";
+	this->title = "";
+	this->yearReleased = 0;
+}
+
+Drama::Drama(string direc, string tit, int yearR) {
+	director = direc;
+	title = tit;
+	yearReleased = yearR;
+}
+
 void Drama::display() {
 	cout << *this << endl;
 }
@@ -68,8 +80,4 @@ bool Drama::isComedy() const {
     return false;
 }
 
-Drama::Drama(string direc, string tit, int yearR) {
-    director = direc;
-    title = tit;
-    yearReleased = yearR;
-}
+
