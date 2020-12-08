@@ -54,25 +54,44 @@ void Store::addMovieInventory(ifstream &infile)
             infile >> MARD;
             Classic* m = new Classic(director, title, MARD);
             //insert movie into respective binTree;
-            C.insert(new Classic(director, title, MARD),stoi(stock));
+            C.insert(m,stoi(stock));
 
         } // insert classic
         else if (genre == comedy)
         {
-
+            string stock;
+            infile >> stock;
+            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            string director;
+            infile >> director;
+            string title;
+            infile >> title;
+            int releaseDate;
+            infile >> releaseDate;
+            Comedy* m = new Comedy(director, title, releaseDate);
+            //insert movie into respective binTree;
+            F.insert(m,stoi(stock));
         } // insert comedy
         else if (genre == drama)
         {
-
+            string stock;
+            infile >> stock;
+            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            string director;
+            infile >> director;
+            string title;
+            infile >> title;
+            int releaseDate;
+            infile >> releaseDate;
+            Drama* m = new Drama(director, title, releaseDate);
+            //insert movie into respective binTree;
+            D.insert(m,stoi(stock));
         } // insert drama
         else{
             cout<<"[ERROR] Genre type: " << genre << " is not available" << endl;
             string nonsense;
             getline(infile, nonsense);
         } // output error for invalid movie type
-
-        //store genre trees in an array? so for(binTree A in arrray) {
-        // if(genre == 'F') {add this movie to that binTree}
     }
 }
 

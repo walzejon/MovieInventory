@@ -19,7 +19,7 @@ void Drama::setYearReleased(int year) {
 	this->yearReleased = year;
 }
 
-bool Drama::operator<(const Drama& rightSide) const {
+bool Drama::operator<(const Movie& rightSide) const {
     if(!rightSide.isDrama()) return false; // check to make sure it is a drama
     const auto otherDrama = dynamic_cast<const Drama*>(&rightSide);
 	if (this->director.compare(otherDrama->getDirector()) != 0) {
@@ -31,7 +31,7 @@ bool Drama::operator<(const Drama& rightSide) const {
 	return false;
 }
 
-bool Drama::operator>(const Drama& rightSide) const {
+bool Drama::operator>(const Movie& rightSide) const {
     if(!rightSide.isDrama()) return false;
     const auto otherDrama = dynamic_cast<const Drama*>(&rightSide);
 	if (this->director.compare(otherDrama->getDirector()) != 0) {
@@ -43,14 +43,14 @@ bool Drama::operator>(const Drama& rightSide) const {
 	return false;
 }
 
-bool Drama::operator==(const Drama& rightSide) const {
+bool Drama::operator==(const Movie& rightSide) const {
     if(!rightSide.isDrama()) return false;
     const auto otherDrama = dynamic_cast<const Drama*>(&rightSide);
 	return (this->director.compare(otherDrama->getDirector()) == 0 && this->title.compare(otherDrama->getTitle())
 		== 0 && this->yearReleased == otherDrama->getYearReleased());
 }
 
-bool Drama::operator!=(const Drama& rightSide) const {
+bool Drama::operator!=(const Movie& rightSide) const {
     if(!rightSide.isDrama()) return false;
     const auto otherDrama = dynamic_cast<const Drama*>(&rightSide);
 	return !(*this == *otherDrama);
@@ -66,4 +66,10 @@ bool Drama::isDrama() const {
 
 bool Drama::isComedy() const {
     return false;
+}
+
+Drama::Drama(string direc, string tit, int yearR) {
+    director = direc;
+    title = tit;
+    yearReleased = yearR;
 }

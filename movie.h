@@ -49,10 +49,10 @@ public:
 
     virtual void display();
 
-    virtual bool operator==(Movie&) const = 0;
-    virtual bool operator!=(Movie&) const = 0;
-    virtual bool operator<(Movie&) const = 0;
-    virtual bool operator>(Movie&) const = 0;
+    virtual bool operator==(const Movie&) const = 0;
+    virtual bool operator!=(const Movie&) const = 0;
+    virtual bool operator<(const Movie&) const = 0;
+    virtual bool operator>(const Movie&) const = 0;
 
 protected:
     string movieFormat;
