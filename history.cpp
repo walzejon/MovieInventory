@@ -5,5 +5,5 @@ History::History() { }
 History::~History() { }
 
 void History::display(Customer* cust) {
-	cust->displayCustomerHistory();
+	cust->display();
 }
