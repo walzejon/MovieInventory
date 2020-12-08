@@ -118,14 +118,23 @@ void Store::doCommands(ifstream &infile)
             infile >> ID;
             //Get customer from customer Table
             Customer thisCust = customerTable.get(ID);
-            if(thisCust.getCustomerID() == -1) {} ////INVALID CUSTOMER ERROR
+            if(thisCust.getCustomerID() == -1)
+            { ////INVALID CUSTOMER ERROR
+                cout << "[ERROR] Invalid Customer: " << ID << endl;
+            }
             char mediaFormat;
             infile >> mediaFormat;
             //Check to see if media format is correct
-            if(mediaFormat != 'D') {} ////INVALID MEDIA FORMAT ERROR
+            if(mediaFormat != 'D')
+            {////INVALID MEDIA FORMAT ERROR
+                cout << "[ERROR] INVALID MEDIA FORMAT: " << mediaFormat << endl;
+            }
             char movieGenre;
             infile >> movieGenre;
-            if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F') {} ////INVALID GENRE ERROR
+            if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F')
+            {////INVALID GENRE ERROR
+                cout << "[ERROR] INVALID GENRE: " << movieGenre << endl;
+            }
             borrowMovie(thisCust, movieGenre, infile);
 
         }
