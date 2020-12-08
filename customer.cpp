@@ -109,6 +109,13 @@ void Customer::addTransaction(Transaction trans)
 	transHistory.push_back(trans);
 }
 
+void Customer::addMovie(Movie* movie) {
+	currentMovies.push_back(movie);
+}
+
+void Customer::removeMovie(Movie* movie) {
+	currentMovies.erase(remove(currentMovies.begin(), currentMovies.end(), movie), currentMovies.end());
+}
 
 // display (customer history)
  

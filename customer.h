@@ -32,6 +32,8 @@ public:
 
 	void setData(istream& readFile); //set the data
 	void addTransaction(Transaction); //add transaction to specific customer
+	void addMovie(Movie*);
+	void removeMovie(Movie*);
 	virtual void display();
 
 	//getters
@@ -50,6 +52,7 @@ private:
 	string firstName;
 	string lastName;
 	vector<Transaction> transHistory; //for customer trasaction history
+	vector<Movie*> currentMovies;
 };
 
 #endif
