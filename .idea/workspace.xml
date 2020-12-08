@@ -30,7 +30,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/movie.h" beforeDir="false" afterPath="$PROJECT_DIR$/movie.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bintree.h" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.h" beforeDir="false" afterPath="$PROJECT_DIR$/store.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +93,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="23471000" />
+      <workItem from="1607059339551" duration="26480000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -308,7 +312,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607404185380</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="makeMovieInventory Complete">
+      <created>1607404700575</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1607404700575</updated>
+    </task>
+    <task id="LOCAL-00033" summary="display is const">
+      <created>1607404966740</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1607404966740</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,21 +364,22 @@
     <MESSAGE value="Classic() shit" />
     <MESSAGE value="can inset into BinTree" />
     <MESSAGE value="makeMovieInventory Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="makeMovieInventory Complete" />
+    <MESSAGE value="display is const" />
+    <option name="LAST_COMMIT_MESSAGE" value="display is const" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607404185127">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607404966480">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607404185127" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607404966480" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607404189035">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607404969137">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607404189035" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607404969137" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607399983427">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

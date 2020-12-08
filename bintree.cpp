@@ -155,16 +155,18 @@ void BinTree::retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) c
 }
 
 
-//inorderDisplay
-// A helper method that recursively prints the tree in-order traversal	
- 
-void BinTree::preorderDisplay(Node* current) const
+void BinTree::preorderDisplay() const
+{
+    preorderDisplayHelper(root);
+}
+
+void BinTree::preorderDisplayHelper(Node* current) const
 {
 	if (current != NULL)
 	{
-        preorderDisplay(current->left);
+        preorderDisplayHelper(current->left);
         current->movie->display();
-		preorderDisplay(current->right);
+		preorderDisplayHelper(current->right);
 	}
 }
 
@@ -194,3 +196,8 @@ void BinTree::sideways(Node* current, int level) const {
         sideways(current->left, level);
     }
 }
+
+BinTree::Node *BinTree::getRoot() {
+    return root;
+}
+

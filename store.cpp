@@ -97,11 +97,13 @@ void Store::addMovieInventory(ifstream &infile)
 
 
 //preorder print
-void Store::printMovies(BinTree* A)
+void Store::showStock() const
 {
-    A->preorderDisplay(A->getRoot());
+    F.preorderDisplay();
+    D.preorderDisplay();
+    C.preorderDisplay();
 }
-
+/////ADD correct errors
 void Store::doCommands(ifstream &infile)
 {
     for(;;)
@@ -109,10 +111,49 @@ void Store::doCommands(ifstream &infile)
         if(infile.eof()) break;
         char command;
         infile >> command;
-        if (command == 'I') {}//do I maybe commandI(infile) do rest of parsing there
-        if (command == 'B') {} //do B
-        if (command == 'H') {} //do H
-        if (command == 'R') {} // do R
+        if (command == 'I') {showStock();}
+        else if (command == 'B')
+        {
+            int ID;
+            infile >> ID;
+            //Get customer from customer Table
+            Customer thisCust = customerTable.get(ID);
+            if(thisCust.getCustomerID() == -1) {} ////INVALID CUSTOMER ERROR
+            char mediaFormat;
+            infile >> mediaFormat;
+            //Check to see if media format is correct
+            if(mediaFormat != 'D') {} ////INVALID MEDIA FORMAT ERROR
+            char movieGenre;
+            infile >> movieGenre;
+            if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F') {} ////INVALID GENRE ERROR
+            string movieData;
+            getline(infile, movieData);
+
+        }
+        else if (command == 'H') {} //do H
+        else if (command == 'R') {} // do R
+        else{
+            //invalid action code
+        }
     }
 }
+
+//maybe just for testing.
+void Store::printMoviesSideways(BinTree *A) const
+{
+    A->displaySideways();
+}
+
+void Store::borrowMovie(char movieGenre, string movieData)
+{
+    if(movieGenre == 'D' || movieGenre == 'F')
+    {
+        //parse data and borrow movie
+    } else if (movieGenre == 'C')
+    {
+        //parse data and borrow movie
+    }
+}
+
+
 

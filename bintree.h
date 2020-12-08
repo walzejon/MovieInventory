@@ -34,7 +34,8 @@ public:
 	//retrieve movie
 	bool retrieve(Movie&, Movie*&) const; // look at later
 	//displays order
-	void preorderDisplay(Node* current) const;
+	void preorderDisplay() const;
+
 	//gets the root
 	BinTree::Node* getRoot();
 	void displaySideways() const;
@@ -43,6 +44,7 @@ private:
 	void retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const;
 	//helper method to destroy the tree
 	void destroyTree(Node*&);
+    void preorderDisplayHelper(Node* current) const;
 	void sideways(Node* current, int level) const;
 };
 #endif

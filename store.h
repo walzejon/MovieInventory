@@ -29,7 +29,9 @@ public:
     //void newMoviestock(); idk if we need this
     void printCustomers();
     void printHistory();
-    void printMovies(BinTree* A);
+    void borrowMovie(char movieGenre, string movieData);
+    void showStock() const;
+    void printMoviesSideways(BinTree* A) const;
 
 private:
     HashTable customerTable;
