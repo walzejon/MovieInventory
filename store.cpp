@@ -54,35 +54,56 @@ void Store::addMovieInventory(ifstream &infile)
             infile >> MARD;
             Classic* m = new Classic(director, title, MARD);
             //insert movie into respective binTree;
-            C.insert(new Classic(director, title, MARD),stoi(stock));
+            C.insert(m,stoi(stock));
 
         } // insert classic
         else if (genre == comedy)
         {
-
+            string stock;
+            infile >> stock;
+            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            string director;
+            infile >> director;
+            string title;
+            infile >> title;
+            int releaseDate;
+            infile >> releaseDate;
+            Comedy* m = new Comedy(director, title, releaseDate);
+            //insert movie into respective binTree;
+            F.insert(m,stoi(stock));
         } // insert comedy
         else if (genre == drama)
         {
-
+            string stock;
+            infile >> stock;
+            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            string director;
+            infile >> director;
+            string title;
+            infile >> title;
+            int releaseDate;
+            infile >> releaseDate;
+            Drama* m = new Drama(director, title, releaseDate);
+            //insert movie into respective binTree;
+            D.insert(m,stoi(stock));
         } // insert drama
         else{
             cout<<"[ERROR] Genre type: " << genre << " is not available" << endl;
             string nonsense;
             getline(infile, nonsense);
         } // output error for invalid movie type
-
-        //store genre trees in an array? so for(binTree A in arrray) {
-        // if(genre == 'F') {add this movie to that binTree}
     }
 }
 
 
 //preorder print
-void Store::printMovies(BinTree* A)
+void Store::showStock() const
 {
-    A->preorderDisplay(A->getRoot());
+    F.preorderDisplay();
+    D.preorderDisplay();
+    C.preorderDisplay();
 }
-
+/////ADD correct errors
 void Store::doCommands(ifstream &infile)
 {
     for(;;)
@@ -90,10 +111,91 @@ void Store::doCommands(ifstream &infile)
         if(infile.eof()) break;
         char command;
         infile >> command;
-        if (command == 'I') {}//do I maybe commandI(infile) do rest of parsing there
-        if (command == 'B') {} //do B
-        if (command == 'H') {} //do H
-        if (command == 'R') {} // do R
+        if (command == 'I') {showStock();}
+        else if (command == 'B')
+        {
+            int ID;
+            infile >> ID;
+            //Get customer from customer Table
+            Customer thisCust = customerTable.get(ID);
+
+            if(thisCust.getCustomerID() == -1)
+            { ////INVALID CUSTOMER ERROR
+                cout << "[ERROR] Invalid Customer: " << ID << endl;
+                continue;
+            }
+            char mediaFormat;
+            infile >> mediaFormat;
+
+            //Check to see if media format is correct
+            if(mediaFormat != 'D')
+            {////INVALID MEDIA FORMAT ERROR
+                cout << "[ERROR] INVALID MEDIA FORMAT: " << mediaFormat << endl;
+                continue;
+            }
+
+            char movieGenre;
+            infile >> movieGenre;
+
+            if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F')
+            {////INVALID GENRE ERROR
+                cout << "[ERROR] INVALID GENRE: " << movieGenre << endl;
+                continue;
+            }
+            borrowMovie(thisCust, movieGenre, infile);
+
+        }
+        else if (command == 'H') {} //do H
+        else if (command == 'R') {} // do R
+        else{
+            //invalid action code
+        }
     }
 }
 
+//maybe just for testing.
+void Store::printMoviesSideways(BinTree *A) const
+{
+    A->displaySideways();
+}
+
+void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
+{
+    if(movieGenre == 'D')
+    {
+        string director;
+        string title;
+        infile >> director;
+        infile >> title;
+
+        //find movie in binTree
+
+        //borrow(borrower, director, title);
+
+
+    } else if (movieGenre == 'F')
+    {
+        string title;
+        int year;
+        infile >> title;
+        infile >> year;
+
+        //find movie in binTree
+
+        //borrow(borrower, title, year);
+
+    } else if (movieGenre == 'C')
+    {
+        int month;
+        int year;
+        string MA;
+
+        infile >> month;
+        infile >> year;
+        getline(infile, MA);
+
+        //find movie in binTree
+
+        //borrow(borrower, month, year, MA);
+    }
+}

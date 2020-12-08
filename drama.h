@@ -9,13 +9,18 @@
 class Drama : public Movie {
     friend ostream& operator<<(ostream& outputStream, Drama& drama);
 public:
-    int getYearReleased();
+    Drama();
+    Drama(string direc, string tit, int yearR);
+    int getYearReleased() const;
     void setYearReleased(int year);
     void display();
-    virtual bool operator<(const Drama& rightSide) const;
-    virtual bool operator>(const Drama& rightSide) const;
-    virtual bool operator==(const Drama& rightSide) const;
-    virtual bool operator!=(const Drama& rightSide) const;
+    virtual bool isClassic() const;
+    virtual bool isDrama() const;
+    virtual bool isComedy() const;
+    virtual bool operator<(const Movie& rightSide) const;
+    virtual bool operator>(const Movie& rightSide) const;
+    virtual bool operator==(const Movie& rightSide) const;
+    virtual bool operator!=(const Movie& rightSide) const;
 private:
     int yearReleased;
 };

@@ -43,12 +43,16 @@ public:
     int getMaxStock();
     void setMaxStock(int stock);
 
-    virtual void display();
+    virtual bool isClassic() const = 0;
+    virtual bool isDrama() const = 0;
+    virtual bool isComedy() const = 0;
 
-    virtual bool operator==(Movie&) const = 0;
-    virtual bool operator!=(Movie&) const = 0;
-    virtual bool operator<(Movie&) const = 0;
-    virtual bool operator>(Movie&) const = 0;
+    virtual void display() const;
+
+    virtual bool operator==(const Movie&) const = 0;
+    virtual bool operator!=(const Movie&) const = 0;
+    virtual bool operator<(const Movie&) const = 0;
+    virtual bool operator>(const Movie&) const = 0;
 
 protected:
     string movieFormat;
