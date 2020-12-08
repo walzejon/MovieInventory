@@ -23,7 +23,7 @@ public:
     void insertItem(Customer);
     void removeItem(int ID);
     //bool containsKey(int ID);
-    Customer get(int ID);
+    Customer* get(int ID);
     int getSize();
     void display();
     void clear();

@@ -29,7 +29,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="" />
+    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +91,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="32397000" />
+      <workItem from="1607059339551" duration="32804000" />
     </task>
     <task id="LOCAL-00001" summary="Changed hash">
       <created>1607055015614</created>
@@ -376,7 +380,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607467852998</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="hashtable error fixed">
+      <created>1607468083046</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1607468083046</updated>
+    </task>
+    <task id="LOCAL-00043" summary="hashtable error fixed">
+      <created>1607468137985</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1607468137985</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,20 +440,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="hashtable error fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="264" y="23" key="CommitChangelistDialog2" timestamp="1607467852670">
+    <state x="264" y="23" key="CommitChangelistDialog2" timestamp="1607468137741">
       <screen x="45" y="23" width="1235" height="777" />
     </state>
     <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607413327084" />
-    <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607467852670" />
+    <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="277" y="159" key="Vcs.Push.Dialog.v2" timestamp="1607467855769">
+    <state x="277" y="159" key="Vcs.Push.Dialog.v2" timestamp="1607468142162">
       <screen x="45" y="23" width="1235" height="777" />
     </state>
     <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607412056433" />
-    <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607467855769" />
+    <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607468142162" />
     <state x="468" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607466957070">
       <screen x="45" y="23" width="1235" height="777" />
     </state>

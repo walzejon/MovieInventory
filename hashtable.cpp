@@ -77,7 +77,7 @@ void HashTable::display()
     }
 }
 
-Customer HashTable::get(int ID) {
+Customer* HashTable::get(int ID) {
     int index = hashFunction(ID);
     bool foundCustomer = false;
     Customer findMe;
@@ -95,12 +95,12 @@ Customer HashTable::get(int ID) {
     if(foundCustomer)
     {
         cout << "Found Customer ID: " << ID << endl;
-        return findMe;
+        return &findMe;
     } else
     {
         cout << "[ERROR] ID: " << ID << " not found." << endl;
     }
-    return Customer(-1,"notFound","notFound"); //Customer not found
+    return new Customer(-1,"notFound","notFound"); //Customer not found
 }
 
 HashTable::HashTable() {
