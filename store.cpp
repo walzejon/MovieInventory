@@ -128,6 +128,7 @@ void Store::doCommands(ifstream &infile)
             if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F') {} ////INVALID GENRE ERROR
             string movieData;
             getline(infile, movieData);
+            borrowMovie(movieGenre, movieData);
 
         }
         else if (command == 'H') {} //do H
