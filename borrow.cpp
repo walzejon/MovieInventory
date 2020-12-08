@@ -19,6 +19,7 @@ bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 	Transaction* trans = new Transaction();
 	trans->setTransactionType('B');
 	cust->addTransaction(*trans);
+	cust->addMovie(movie);
 	movieType = media;
 	hasBeenBorrowed = true;
 	return true;

@@ -32,6 +32,8 @@ public:
 
 	void setData(istream& readFile); //set the data
 	void addTransaction(Transaction); //add transaction to specific customer
+	void addMovie(Movie*);
+	void removeMovie(Movie*);
 	virtual void display();
 
 	//getters
@@ -40,8 +42,8 @@ public:
 	string getLastName() const;
 
 	//operator overloads for comparison
-	virtual bool operator==(const Customer& rightSide) const; 
-	virtual bool operator!=(const Customer& rightSide) const; 
+	virtual bool operator==(const Customer& rightSide) const = 0; 
+	virtual bool operator!=(const Customer& rightSide) const = 0; 
 	Customer& operator=(const Customer& rightSide);
 private:
     void displayCustomerHistory() const; //display customer history
@@ -50,6 +52,7 @@ private:
 	string firstName;
 	string lastName;
 	vector<Transaction> transHistory; //for customer trasaction history
+	vector<Movie*> currentMovies;
 };
 
 #endif

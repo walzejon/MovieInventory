@@ -117,9 +117,9 @@ void Store::doCommands(ifstream &infile)
             int ID;
             infile >> ID;
             //Get customer from customer Table
-            Customer thisCust = customerTable.get(ID);
+            Customer* thisCust = customerTable.get(ID);
 
-            if(thisCust.getCustomerID() == -1)
+            if(thisCust->getCustomerID() == -1)
             { ////INVALID CUSTOMER ERROR
                 cout << "[ERROR] Invalid Customer: " << ID << endl;
                 continue;
@@ -159,7 +159,7 @@ void Store::printMoviesSideways(BinTree *A) const
     A->displaySideways();
 }
 
-void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
+void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
     if(movieGenre == 'D')
     {

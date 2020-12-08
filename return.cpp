@@ -17,6 +17,7 @@ bool Return::returnMovie(string media, Movie* movie, Customer* cust) {
 	Transaction* trans = new Transaction();
 	trans->setTransactionType('R');
 	cust->addTransaction(*trans);
+	cust->removeMovie(movie);
 	mediaType = media;
 	hasBeenBorrowed = false;
 	return true;
