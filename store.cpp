@@ -118,22 +118,29 @@ void Store::doCommands(ifstream &infile)
             infile >> ID;
             //Get customer from customer Table
             Customer thisCust = customerTable.get(ID);
+
             if(thisCust.getCustomerID() == -1)
             { ////INVALID CUSTOMER ERROR
                 cout << "[ERROR] Invalid Customer: " << ID << endl;
+                continue;
             }
             char mediaFormat;
             infile >> mediaFormat;
+
             //Check to see if media format is correct
             if(mediaFormat != 'D')
             {////INVALID MEDIA FORMAT ERROR
                 cout << "[ERROR] INVALID MEDIA FORMAT: " << mediaFormat << endl;
+                continue;
             }
+
             char movieGenre;
             infile >> movieGenre;
+
             if (movieGenre != 'D' && movieGenre != 'C' && movieGenre != 'F')
             {////INVALID GENRE ERROR
                 cout << "[ERROR] INVALID GENRE: " << movieGenre << endl;
+                continue;
             }
             borrowMovie(thisCust, movieGenre, infile);
 
@@ -161,6 +168,8 @@ void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
         infile >> director;
         infile >> title;
 
+        //find movie in binTree
+
         //borrow(borrower, director, title);
 
 
@@ -170,6 +179,8 @@ void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
         int year;
         infile >> title;
         infile >> year;
+
+        //find movie in binTree
 
         //borrow(borrower, title, year);
 
@@ -182,6 +193,8 @@ void Store::borrowMovie(Customer borrower, char movieGenre, ifstream& infile)
         infile >> month;
         infile >> year;
         getline(infile, MA);
+
+        //find movie in binTree
 
         //borrow(borrower, month, year, MA);
     }
