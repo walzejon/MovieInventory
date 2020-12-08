@@ -12,7 +12,7 @@ public:
     Classic(string di, string tit, string mard);
     string getMARD() const;
     void setMARD(string);
-    void display() const;
+    void display();
     virtual bool isClassic() const;
     virtual bool isDrama() const;
     virtual bool isComedy() const;
