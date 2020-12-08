@@ -40,8 +40,8 @@ public:
 	string getLastName() const;
 
 	//operator overloads for comparison
-	virtual bool operator==(const Customer& rightSide) const; 
-	virtual bool operator!=(const Customer& rightSide) const; 
+	virtual bool operator==(const Customer& rightSide) const = 0; 
+	virtual bool operator!=(const Customer& rightSide) const = 0; 
 	Customer& operator=(const Customer& rightSide);
 private:
     void displayCustomerHistory() const; //display customer history
