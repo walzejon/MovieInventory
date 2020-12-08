@@ -2,7 +2,7 @@
 
 ostream& operator<<(ostream& outputStream, Drama& drama) {
 	outputStream << drama.getFormat() << ", " << drama.getCurrentStock() << ", "
-		<< drama.getTitle() << ", " << drama.getDirector() << ", "
+		<< drama.getDirector() << ", " << drama.getTitle() << ", "
 		<< drama.getYearReleased();
 	return outputStream;
 }
