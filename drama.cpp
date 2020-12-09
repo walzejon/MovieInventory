@@ -19,6 +19,9 @@ Drama::Drama(string direc, string tit, int yearR) {
 	year = yearR;
 }
 
+string Drama::getTitle() const {
+	return this->title;
+}
 
 void Drama::display() {
 	cout << *this << endl;
