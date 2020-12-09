@@ -49,14 +49,14 @@ void Store::addMovieInventory(ifstream &infile)
         if (genre == classic)
         {
             string stock;
-            infile >> stock;
-            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            getline(infile, stock, ',');
+            //stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
             string director;
-            infile >> director;
+            getline(infile, director, ',');
             string title;
-            infile >> title;
+            getline(infile, title, ',');
             string MARD;
-            infile >> MARD;
+            getline(infile, MARD);
             Classic* m = new Classic(director, title, MARD);
             //insert movie into respective binTree;
             C.insert(m,stoi(stock));
@@ -65,12 +65,12 @@ void Store::addMovieInventory(ifstream &infile)
         else if (genre == comedy)
         {
             string stock;
-            infile >> stock;
-            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            getline(infile, stock, ',');
+            //stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
             string director;
-            infile >> director;
+            getline(infile, director, ',');
             string title;
-            infile >> title;
+            getline(infile, title, ',');
             int releaseDate;
             infile >> releaseDate;
             Comedy* m = new Comedy(director, title, releaseDate);
@@ -80,20 +80,21 @@ void Store::addMovieInventory(ifstream &infile)
         else if (genre == drama)
         {
             string stock;
-            infile >> stock;
-            stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
+            getline(infile, stock, ',');
+            //stock = stock.substr(0,stock.length() - 2); //////// make sure this works.
             string director;
-            infile >> director;
+            getline(infile, director, ',');
             string title;
-            infile >> title;
+            getline(infile, director, ',');
             int releaseDate;
             infile >> releaseDate;
             Drama* m = new Drama(director, title, releaseDate);
             //insert movie into respective binTree;
             D.insert(m,stoi(stock));
         } // insert drama
-        else{
-            cout<<"[ERROR] Genre type: " << genre << " is not available" << endl;
+        else {
+            if (genre[0]) cout << "[ERROR] Genre type: " << genre <<
+                " is not available" << endl;
             string nonsense;
             getline(infile, nonsense);
         } // output error for invalid movie type
@@ -280,20 +281,27 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 }
 //runs the program 
 
-/*int main() {
- 
-Store a;
+int main() {
 
-ifstream customers("data4customer.txt");
-ifstream commands("data4commands.txt");
-ifstream movies("data4movies.txt");
+    Store* myStore = new Store();
 
-a.addMovieInventory(movies);
-a.addCustomers(customers);
-a.doCommands(commands);
-
-a.doCommands(commands);
-
-return 0;
-
-}*/
+    ifstream commands, customers, movies;
+    movies = ifstream("C:/Users/shado/Documents/MovieInventory/data4movies.txt");
+    if (!movies) {
+        cout << "Movies data file not found!" << endl;
+        return 1;
+    }
+    customers = ifstream("C:/Users/shado/Documents/MovieInventory/data4customers.txt");
+    if (!movies) {
+        cout << "Customer data file not found!" << endl;
+        return 1;
+    }
+    commands = ifstream("C:/Users/shado/Documents/MovieInventory/data4commands.txt");
+    if (!movies) {
+        cout << "Commands data file not found!" << endl;
+        return 1;
+    }
+    myStore->addMovieInventory(movies);
+    myStore->addCustomers(customers);
+    myStore->doCommands(commands);
+}
