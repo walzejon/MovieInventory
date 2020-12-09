@@ -42,7 +42,6 @@ bool BinTree::insert(Movie* insertMovie, int copiesIn)
 	{
 		root = ptr; //Empty, set as root
 	}
-
 	else
 	{
 		Node* current = root;
@@ -93,7 +92,6 @@ bool BinTree::insert(Movie* insertMovie, int copiesIn)
 
 
 //isEmpty
-
 bool BinTree::isEmpty() const
 {
 	return (root == NULL);
@@ -101,7 +99,6 @@ bool BinTree::isEmpty() const
 
 
 //makeEmpty
- 
 void BinTree::makeEmpty()
 {
 	destroyTree(root);

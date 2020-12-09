@@ -6,7 +6,7 @@ Assignment 4
 
 #ifndef BINTREE_H
 #define BINTREE_H
-#include "movie.h" //make sure to name it movie
+#include "movie.h"
 
 class BinTree
 {
@@ -32,7 +32,7 @@ public:
     
 	void makeEmpty(); 
 	//retrieve movie
-	bool retrieve(const Movie*, Movie*&) const; // look at later
+	bool retrieve(const Movie*, Movie*&) const;
 	//displays order
 	void preorderDisplay() const;
 

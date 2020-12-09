@@ -31,7 +31,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bintree.h" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtable.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +98,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="56205000" />
-    </task>
-    <task id="LOCAL-00020" summary="binTree display">
-      <created>1607323150404</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1607323150404</updated>
+      <workItem from="1607059339551" duration="56649000" />
     </task>
     <task id="LOCAL-00021" summary="binTree retreiveData">
       <created>1607323881217</created>
@@ -441,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607499505328</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="took out couts">
+      <created>1607499939022</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1607499939022</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add error" />
     <MESSAGE value="hashtable error fixed" />
     <MESSAGE value="get(int ID) in hashTable now returns pointer." />
     <MESSAGE value="'H' command" />
@@ -484,13 +485,14 @@
     <MESSAGE value="classic.cpp" />
     <MESSAGE value="fixed string" />
     <MESSAGE value="where im at" />
-    <option name="LAST_COMMIT_MESSAGE" value="where im at" />
+    <MESSAGE value="took out couts" />
+    <option name="LAST_COMMIT_MESSAGE" value="took out couts" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607499504881">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607499938515">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607499504881" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607499938515" />
     <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
     <state width="1238" height="165" key="GridCell.Tab.0.bottom" timestamp="1607499925094">
       <screen x="0" y="0" width="1280" height="800" />
@@ -536,10 +538,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607497661094">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607499943436">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607497661094" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607499943436" />
     <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607468142162" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607499522064">
       <screen x="0" y="0" width="1280" height="800" />

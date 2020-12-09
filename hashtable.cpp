@@ -18,9 +18,10 @@ int HashTable::hashFunction(int ID)
 {
     return ID % hashGroup;
 }
-
-void HashTable::insertItem(Customer cust) // should i require the user to input an ID or just call cust.id??
-{                                  // idk if cust should be a reference or not
+// PRE: Customer must contain it's own unique ID. Use cutomer.getID() to get ID
+// Post: IF the hashTable contains a customer with given ID it replaces that customer
+void HashTable::insertItem(Customer cust)
+{
     int hashValue = hashFunction(cust.getCustomerID());
     auto& cell = table[hashValue];
     bool keyExists = false;
@@ -42,6 +43,7 @@ void HashTable::insertItem(Customer cust) // should i require the user to input 
     }
 }
 
+//Removes a customer with given ID
 void HashTable::removeItem(int ID)
 {
     int hashValue = hashFunction(ID);
@@ -77,6 +79,8 @@ void HashTable::display()
     }
 }
 
+//PRE: ID must be valid, else throws error message.
+// returns a customer with given ID.
 Customer* HashTable::get(int ID) {
     int index = hashFunction(ID);
     bool foundCustomer = false;
@@ -121,30 +125,3 @@ void HashTable::clear() {
         table[i].clear();
     }
 }
-
-//int main()
-//{
-//    HashTable HT;
-//
-//    if(HT.isEmpty())
-//    {
-//        cout<<"isEmpty works right" <<endl;
-//    } else
-//    {
-//        cout << "ERROR isEmpty is not working" << endl;
-//    }
-//
-//    Customer James =  Customer(1102,"James","Jackson");
-//    HT.insertItem(1102,James);
-//    HT.insertItem(1101,Customer(1101,"Hi","Bye"));
-//    HT.insertItem(6969, Customer(6969,"sixtey","nine"));
-//    HT.insertItem(1101,Customer(1101,"James","Bond"));
-//
-//    HT.display();
-//
-//    HT.removeItem(1101);
-//    HT.display();
-//
-//    if(HT.isEmpty()) cout << "ERROR isEmpty is not working" << endl;
-//    else cout<<"isEmpty works right" <<endl;
-//}
