@@ -201,13 +201,15 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string director, year;
             getline(infile, director, ',');
             getline(infile, year, ',');
-            cout<<"Director: "<< director << " Title: " << year<<endl;
-            Comedy* dummy = new Comedy(director, stoi(year), NULL);
+            cout<<"Director"<<director << "..Year"<<year<<endl;
+            Comedy* dummy = new Comedy(director, NULL,stoi(year));
+            cout<<"Hi"<<endl;
             Movie* result;
-            if (F.retrieve(dummy, result) == true) {
+            if (F.retrieve(dummy, result)) {
+                cout << result->getStockOwned() << " " << result->getStockDifference() << endl;
                 bor->borrowMovie("D", result, borrower);
             }
-            delete dummy;
+            //delete dummy;
             break;
         }
         case 'C': {
