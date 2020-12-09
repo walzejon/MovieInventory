@@ -29,12 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,14 +93,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="44348000" />
-    </task>
-    <task id="LOCAL-00005" summary="Customer constructor updated">
-      <created>1607065053057</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1607065053057</updated>
+      <workItem from="1607059339551" duration="44360000" />
     </task>
     <task id="LOCAL-00006" summary="Customer constructor updated">
       <created>1607065631719</created>
@@ -443,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607485478738</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="fuck me">
+      <created>1607487951180</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1607487951180</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +456,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="store.cpp add customer" />
     <MESSAGE value="binTree display" />
     <MESSAGE value="binTree retreiveData" />
     <MESSAGE value="BinTree getRoot()" />
@@ -486,13 +480,14 @@
     <MESSAGE value="hashTable.find(int ID) error resolved" />
     <MESSAGE value="dereference" />
     <MESSAGE value="good" />
-    <option name="LAST_COMMIT_MESSAGE" value="good" />
+    <MESSAGE value="fuck me" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuck me" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607485478317">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607487950759">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607485478317" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607487950759" />
     <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
     <state width="1238" height="230" key="GridCell.Tab.0.bottom" timestamp="1607487853474">
       <screen x="0" y="0" width="1280" height="800" />
