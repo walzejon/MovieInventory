@@ -10,7 +10,7 @@ public:
 	Return(const Return&);
 	~Return();
 	bool returnMovie(string, Movie*, Customer*);
-	string display() const;
+	void display();
 	virtual Transaction* create();
 };
 #endif

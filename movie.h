@@ -49,7 +49,7 @@ public:
     virtual bool isDrama() const = 0;
     virtual bool isComedy() const = 0;
 
-    virtual void display() const;
+    virtual void display();
 
     virtual bool operator==(const Movie&) const = 0;
     virtual bool operator!=(const Movie&) const = 0;

@@ -31,7 +31,7 @@ bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 	}
 }
 
-string Borrow::display() const {
+void Borrow::display() {
 	cout << movieType << " " << transactionType << " " << endl;
 }
 
