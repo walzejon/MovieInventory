@@ -280,20 +280,29 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 }
 //runs the program 
 
-/*int main() {
- 
-Store a;
+int main() {
+    Store* myStore = new Store();
 
-ifstream customers("data4customer.txt");
-ifstream commands("data4commands.txt");
-ifstream movies("data4movies.txt");
-
-a.addMovieInventory(movies);
-a.addCustomers(customers);
-a.doCommands(commands);
-
-a.doCommands(commands);
+    ifstream commands, customers, movies;
+    movies = ifstream("data4movies.txt");
+    if (!movies) {
+        cout << "Movies data file not found!" << endl;
+        return 1;
+    }
+    customers = ifstream("data4customers.txt");
+    if (!movies) {
+        cout << "Customer data file not found!" << endl;
+        return 1;
+    }
+    commands = ifstream("data4commands.txt");
+    if (!movies) {
+        cout << "Commands data file not found!" << endl;
+        return 1;
+    }
+    myStore->addMovieInventory(movies);
+    myStore->addCustomers(customers);
+    myStore->doCommands(commands);
 
 return 0;
 
-}*/
+}

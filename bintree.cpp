@@ -146,8 +146,9 @@ void BinTree::retrieveHelper(Node* curPtr, Movie* dataItem, Movie*& dataFound) c
 	if (curPtr == NULL)
 		dataFound = NULL;
 
-	//if found, then assign it 
-	else if (dataItem == curPtr->movie)
+	//if found, then assign it
+
+	else if (*dataItem == *(curPtr->movie))
 		dataFound = curPtr->movie;
 
 	//otherwise check recursivly every child
