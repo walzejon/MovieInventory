@@ -8,13 +8,21 @@
 
 using namespace std;
 
+//------------------------------ Constructor --------------------------------
+// Default Constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Store::Store()
 {
-    //initialize HashTable
-    //initialize bintree
-    //initialize transactionHisory
+    
 }
 
+//------------------------------ addCustomers -------------------------------
+// Add customers read from file into HashTable 
+// Preconditions: data4customers.txt file
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::addCustomers(ifstream &infile)
 {
     //Assume data is set in format below
@@ -32,6 +40,11 @@ void Store::addCustomers(ifstream &infile)
     }
 }
 
+//------------------------------ addMovieInventory --------------------------
+// Add movies into BinTree depending on genre
+// Preconditions: Comedy, Drama, or Classic type genre & data4movies.txt file
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::addMovieInventory(ifstream &infile)
 {
     //-	For comedy movies: F, Stock, Director, Title, Year it released
@@ -106,15 +119,23 @@ void Store::addMovieInventory(ifstream &infile)
     }
 }
 
-
-//preorder print
+//------------------------------ showStock ----------------------------------
+// Displays stock using BinTree's preorderDisplay method
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::showStock() const
 {
     F.preorderDisplay();
     D.preorderDisplay();
     C.preorderDisplay();
 }
-/////ADD correct errors
+
+//------------------------------ doCommands ---------------------------------
+// Performs commands read from data4commands.txt file
+// Preconditions: data4commands.txt file
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::doCommands(ifstream &infile)
 {
     for(;;)
@@ -170,12 +191,21 @@ void Store::doCommands(ifstream &infile)
     }
 }
 
-//maybe just for testing.
+//------------------------------ printMoviesSideways ------------------------
+// Prints BinTree sideways
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::printMoviesSideways(BinTree *A) const
 {
     A->displaySideways();
 }
 
+//------------------------------ borrowMovie --------------------------------
+// Borrows movie and gives it to customer
+// Preconditions: Customer & Borrow class
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
     cout << "Borrowing " << movieGenre << " genre." << endl;
@@ -235,6 +265,11 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
     }
 }
 
+//------------------------------ returnMovie --------------------------------
+// Returns movie that customer owns
+// Preconditions: Customer owns movie
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 {
     switch (movieGenre)
@@ -290,8 +325,12 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
         }
     }
 }
-//runs the program 
 
+//------------------------------ main ---------------------------------------
+// main function to run program
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 int main() {
     Store* myStore = new Store();
 

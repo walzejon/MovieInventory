@@ -1,39 +1,71 @@
 #include "comedy.h"
-//displays comedy movies with their director, title, and year 
+
+//---------------------------- operator<< -----------------------------------
+// Overloaded operator<< to output Movie info.
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 ostream& operator<<(ostream& outputStream, Comedy& com) {
 	outputStream << com.getFormat() << ", " << com.getCurrentStock() << ", "
 		<< com.getDirector() << ", " << com.getTitle() << ", " 
 		<< com.getYearReleased();
 	return outputStream;
 }
-//constructor
+
+//---------------------------- Constructor ----------------------------------
+// Default constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Comedy::Comedy() {
 	this->director = "";
 	this->title = "";
 	this->year = 0;
 }
-//copy constructor
+
+//---------------------------- Constructor ----------------------------------
+// Constructor taking in 3 arguments
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Comedy::Comedy(string direc, string tit, int yearR) {
 	director = direc;
 	title = tit;
 	year = yearR;
 }
 
-//display
+//---------------------------- display --------------------------------------
+// Displays Comedy movie info
+// Preconditions: operator<<
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Comedy::display() {
 	cout << *this << endl;
 }
-//getter
+
+//---------------------------- getYearReleased ------------------------------
+// Returns the year
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 int Comedy::getYearReleased() const {
 	return this->year;
 }
-//setter
+
+//---------------------------- setYearReleased ------------------------------
+// Sets the year
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Comedy::setYearReleased(int year) {
 	this->year = year;
 }
 
-//comparison operators 
-
+//---------------------------- operator< ------------------------------------
+// Overloaded operator< to compare Movie info
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::operator<(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
@@ -46,6 +78,11 @@ bool Comedy::operator<(const Movie& rightSide) const {
 	return false;
 }
 
+//---------------------------- operator> ------------------------------------
+// Overloaded operator> to compare Movie info
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::operator>(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
@@ -58,28 +95,51 @@ bool Comedy::operator>(const Movie& rightSide) const {
 	return false;
 }
 
+//---------------------------- operator== -----------------------------------
+// Overloaded operator== to compare Movie info
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::operator==(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
 	return (this->title.compare(otherComedy->getTitle()) == 0 && this->year == otherComedy->getYear());
 }
 
+//---------------------------- operator!= -----------------------------------
+// Overloaded operator!= to compare Movie info.
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::operator!=(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
 	return !(*this == *otherComedy);
 }
 
-//returns true if it's this genre or false if it's not
-
+//---------------------------- isClassic ------------------------------------
+// Checks to see if movie genre is classic
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::isClassic() const {
     return false;
 }
 
+//---------------------------- isDrama --------------------------------------
+// Checks to see if movie genre is drama
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::isDrama() const {
     return false;
 }
 
+//---------------------------- isComedy -------------------------------------
+// Checks to see if movie genre is comedy
+// Preconditions: Movie& 
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Comedy::isComedy() const {
     return true;
 }
