@@ -2,8 +2,10 @@
 #include "bintree.h"
 #include "movie.h"
 
+//default constructor
 Borrow::Borrow() { transactionType = 'B'; }
 
+//copy constructor
 Borrow::Borrow(const Borrow& rightSide) {
 	transactionID = rightSide.transactionID;
 	transactionType = rightSide.transactionType;
@@ -11,8 +13,10 @@ Borrow::Borrow(const Borrow& rightSide) {
 	hasBeenBorrowed = rightSide.hasBeenBorrowed;
 }
 
+//destructor
 Borrow::~Borrow() { }
 
+//getters and setters, transaction creation, display
 bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 	if (movie->getCurrentStock() > 0) {
 		movie->setCurrentStock(movie->getCurrentStock() - 1);
@@ -24,17 +28,17 @@ bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 		movieType = media;
 		hasBeenBorrowed = true;
 		return true;
-	}
+	} //error message displays if movie not available 
 	else {
 		cout << "Error: No available stock" << endl;
 		return false;
 	}
 }
-
+//displays the transaction type and the type of movie
 void Borrow::display() {
 	cout << movieType << " " << transactionType << " " << endl;
 }
-
+//creates a new borrow transaction 
 Transaction* Borrow::create() {
 	return new Borrow();
 }
