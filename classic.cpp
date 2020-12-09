@@ -32,6 +32,14 @@ void Classic::setMARD(string mard) {
 	this->MARD = mard;
 }
 
+string Classic::getMA() const {
+	return this->MA;
+}
+
+void Classic::setMA(string MA) {
+	this->MA = MA;
+}
+
 bool Classic::operator<(const Movie& rightSide) const {
     //MAKE SURE it really is a classic , if not return false
     if(!rightSide.isClassic()) return false;
@@ -68,8 +76,8 @@ bool Classic::operator==(const Movie& rightSide) const {
     //Make sure right side is Classic!
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-	return (this->director.compare(otherClassic->getDirector()) == 0 && this->title.compare(otherClassic->getTitle())
-		== 0 && this->MARD.compare(otherClassic->getMARD()) == 0);
+	return (this->month == otherClassic->month && this->year == otherClassic->year &&
+		this->MA.compare(otherClassic->MA) == 0);
 }
 
 bool Classic::operator!=(const Movie& rightSide) const {
