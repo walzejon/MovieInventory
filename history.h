@@ -8,8 +8,11 @@ using namespace std;
 
 class History : public Transaction {
 public:
+	//constructor
 	History();
+	//destructor
 	~History();
+	//display
 	void display(Customer*);
 };
 #endif
