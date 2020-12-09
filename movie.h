@@ -54,12 +54,14 @@ public:
     string getMA();
     void setMA(string);
 
+    // validating genre type
     virtual bool isClassic() const = 0;
     virtual bool isDrama() const = 0;
     virtual bool isComedy() const = 0;
 
     virtual void display();
 
+    // pure virtual functions
     virtual bool operator==(const Movie&) const = 0;
     virtual bool operator!=(const Movie&) const = 0;
     virtual bool operator<(const Movie&) const = 0;
