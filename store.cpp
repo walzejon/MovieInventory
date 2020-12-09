@@ -282,7 +282,6 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 //runs the program 
 
 int main() {
-
     Store* myStore = new Store();
 
     ifstream commands, customers, movies;
@@ -292,16 +291,17 @@ int main() {
         return 1;
     }
     customers = ifstream("C:/Users/shado/Documents/MovieInventory/data4customers.txt");
-    if (!movies) {
+    if (!customers) {
         cout << "Customer data file not found!" << endl;
         return 1;
     }
     commands = ifstream("C:/Users/shado/Documents/MovieInventory/data4commands.txt");
-    if (!movies) {
+    if (!commands) {
         cout << "Commands data file not found!" << endl;
         return 1;
     }
     myStore->addMovieInventory(movies);
     myStore->addCustomers(customers);
     myStore->doCommands(commands);
+    return 0;
 }
