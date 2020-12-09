@@ -120,8 +120,8 @@ void Customer::removeMovie(Movie* movie) {
 bool Customer::checkMovie(Movie* movie) {
 	for (int i = 0; i < currentMovies.size(); ++i) {
 		if (currentMovies[i] == movie) return true;
-		else return false;
 	}
+	return false;
 }
 
 // display (customer history)

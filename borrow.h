@@ -13,7 +13,7 @@ public:
 	~Borrow();
 	bool borrowMovie(string, Movie*, Customer*);
 	bool borrowDrama(string, string);
-	string display() const;
+	void display();
 	virtual Transaction* create();
 };
 #endif

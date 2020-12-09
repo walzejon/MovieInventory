@@ -29,7 +29,7 @@ bool Return::returnMovie(string media, Movie* movie, Customer* cust) {
 	}
 }
 
-string Return::display() const {
+void Return::display() {
 	cout << movieType << " " << transactionType << " " << endl;
 }
 

@@ -280,7 +280,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 }
 //runs the program 
 
-int main() {
+/*int main() {
  
 Store a;
 
@@ -296,4 +296,4 @@ a.doCommands(commands);
 
 return 0;
 
-}
+}*/
