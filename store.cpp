@@ -178,7 +178,7 @@ void Store::printMoviesSideways(BinTree *A) const
 
 void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
-    cout << "Borrowing " << movieGenre << endl;
+    cout << "Borrowing " << movieGenre << " genre." << endl;
     switch (movieGenre) 
     {
         case 'D': {
@@ -202,17 +202,13 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string title, year;
             getline(infile, title, ',');
             infile >> year;
-            cout<<"Title"<<title << "..Year"<<year<<endl;
             Comedy* dummy = new Comedy();
             dummy->setTitle(title);
             dummy->setYearReleased(stoi(year));
             Movie* result;
             if (F.retrieve(dummy, result)) {
-                cout << result->getMaxStock() << " " << result->getStockDifference() << endl;
-                cout<<result->getTitle() << " " << result->getYear() << endl;
                 bor->borrowMovie("F", result, borrower);
             }
-            cout<<result->getCurrentStock() <<endl;
             delete dummy;
             break;
         }
