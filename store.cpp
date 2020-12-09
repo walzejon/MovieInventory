@@ -295,17 +295,17 @@ int main() {
     Store* myStore = new Store();
 
     ifstream commands, customers, movies;
-    movies = ifstream("data4movies.txt");
+    movies = ifstream("C:/Users/shado/Documents/MovieInventory/data4movies.txt");
     if (!movies) {
         cout << "Movies data file not found!" << endl;
         return 1;
     }
-    customers = ifstream("data4customers.txt");
+    customers = ifstream("C:/Users/shado/Documents/MovieInventory/data4customers.txt");
     if (!customers) {
         cout << "Customer data file not found!" << endl;
         return 1;
     }
-    commands = ifstream("data4commands.txt");
+    commands = ifstream("C:/Users/shado/Documents/MovieInventory/data4commands.txt");
     if (!commands) {
         cout << "Commands data file not found!" << endl;
         return 1;

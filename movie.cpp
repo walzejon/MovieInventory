@@ -40,6 +40,14 @@ void Movie::setFormat(string movieFormat) {
 	this->movieFormat = movieFormat;
 }
 
+int Movie::getYear() const {
+	return this->year;
+}
+
+void Movie::setYear(int year) {
+	this->year = year;
+}
+
 int Movie::getCurrentStock() {
 	return this->currentStock;
 }
