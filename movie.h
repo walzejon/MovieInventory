@@ -48,6 +48,12 @@ public:
     int getMaxStock();
     void setMaxStock(int stock);
 
+    int getMonth();
+    void setMonth(int);
+
+    string getMA();
+    void setMA(string);
+
     virtual bool isClassic() const = 0;
     virtual bool isDrama() const = 0;
     virtual bool isComedy() const = 0;
@@ -65,6 +71,8 @@ protected:
     int stockOwned;
     string title;
     string director;
+    string MA;
+    int month;
     int year;
     int maxStock;
 };
