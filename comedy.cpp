@@ -60,7 +60,7 @@ bool Comedy::operator==(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
 	return (this->director.compare(otherComedy->getDirector()) == 0 && this->title.compare(otherComedy->getTitle())
-		== 0 && this->yearReleased == otherComedy->getYearReleased());
+		== 0);
 }
 
 bool Comedy::operator!=(const Movie& rightSide) const {

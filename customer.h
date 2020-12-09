@@ -34,6 +34,7 @@ public:
 	void addTransaction(Transaction); //add transaction to specific customer
 	void addMovie(Movie*);
 	void removeMovie(Movie*);
+	bool checkMovie(Movie*);
 	virtual void display();
 
 	//getters
