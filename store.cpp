@@ -218,9 +218,11 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
         case 'C': {
             Borrow* bor = new Borrow();
 
-            string director, title;
-            infile >> director;
-            infile >> title;
+            int month, year;
+            string MA;
+            infile >> month;
+            infile >> year;
+            getline(infile, MA, ',');
             Classic* dummy = new Classic(director, title, NULL);
             Movie* result;
             if (C.retrieve(dummy, result)) {
@@ -264,7 +266,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
             Comedy* dummy = new Comedy(director, title, NULL);
             Movie* result;
             if (F.retrieve(dummy, result) == true) {
-                re->returnMovie("D", result, cust);
+                re->returnMovie("F", result, cust);
             }
             else cout << "Couldn't retrieve Comedy movie" << endl;
             delete dummy;
@@ -279,7 +281,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
             Classic* dummy = new Classic(director, title, NULL);
             Movie* result;
             if (C.retrieve(dummy, result) == true) {
-                re->returnMovie("D", result, cust);
+                re->returnMovie("C", result, cust);
             }
             else cout << "Couldn't retrieve Classic movie" << endl;
             delete dummy;
