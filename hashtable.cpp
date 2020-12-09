@@ -80,7 +80,7 @@ void HashTable::display()
 Customer* HashTable::get(int ID) {
     int index = hashFunction(ID);
     bool foundCustomer = false;
-    Customer findMe;
+    Customer* findMe = new Customer();
     auto& cell = table[index]; //error here
     auto iter = begin(cell);
 
@@ -88,14 +88,14 @@ Customer* HashTable::get(int ID) {
     {
         if(iter->getCustomerID() == ID) {
             foundCustomer = true;
-            findMe = *iter;
+            *findMe = *iter;
             break;
         }
     }
     if(foundCustomer)
     {
         cout << "Found Customer ID: " << ID << endl;
-        return &findMe;
+        return findMe;
     } else
     {
         cout << "[ERROR] ID: " << ID << " not found." << endl;
