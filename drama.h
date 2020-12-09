@@ -14,6 +14,7 @@ public:
     
     int getYearReleased() const;
     void setYearReleased(int year);
+    string getTitle() const;
     void display();
     virtual bool isClassic() const;
     virtual bool isDrama() const;
