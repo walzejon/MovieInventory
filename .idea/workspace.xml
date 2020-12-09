@@ -30,7 +30,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/classic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/classic.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classic.h" beforeDir="false" afterPath="$PROJECT_DIR$/classic.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,14 +95,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="53290000" />
-    </task>
-    <task id="LOCAL-00015" summary="Tran history to transHistory">
-      <created>1607305679626</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1607305679626</updated>
+      <workItem from="1607059339551" duration="53701000" />
     </task>
     <task id="LOCAL-00016" summary="Tran history to transHistory">
       <created>1607305811466</created>
@@ -441,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607496507813</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="compare">
+      <created>1607497263672</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1607497263672</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +458,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="display is const" />
     <MESSAGE value="do Commands" />
     <MESSAGE value="do Commands - borrow movie setup" />
     <MESSAGE value="FIXED Store" />
@@ -484,30 +482,31 @@
     <MESSAGE value="F" />
     <MESSAGE value="my stuff" />
     <MESSAGE value="classic constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="classic constructor" />
+    <MESSAGE value="compare" />
+    <option name="LAST_COMMIT_MESSAGE" value="compare" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607496507191">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607497263281">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607496507191" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607497263281" />
     <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
-    <state width="1238" height="230" key="GridCell.Tab.0.bottom" timestamp="1607495806614">
+    <state width="1238" height="94" key="GridCell.Tab.0.bottom" timestamp="1607497297036">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="230" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607495806609" />
-    <state width="1238" height="230" key="GridCell.Tab.0.center" timestamp="1607495806607">
+    <state width="1238" height="94" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607497297036" />
+    <state width="1238" height="94" key="GridCell.Tab.0.center" timestamp="1607497297034">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="230" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607495806607" />
-    <state width="1238" height="230" key="GridCell.Tab.0.left" timestamp="1607495806602">
+    <state width="1238" height="94" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607497297034" />
+    <state width="1238" height="94" key="GridCell.Tab.0.left" timestamp="1607497297033">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="230" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607495806602" />
-    <state width="1238" height="230" key="GridCell.Tab.0.right" timestamp="1607495806608">
+    <state width="1238" height="94" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607497297033" />
+    <state width="1238" height="94" key="GridCell.Tab.0.right" timestamp="1607497297035">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="230" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607495806608" />
+    <state width="1238" height="94" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607497297035" />
     <state width="1238" height="225" key="GridCell.Tab.1.bottom" timestamp="1607495805999">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -524,14 +523,14 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="225" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1607495805999" />
-    <state x="128" y="69" key="MergeDialog" timestamp="1607479824314">
+    <state x="128" y="69" key="MergeDialog" timestamp="1607497286196">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="128" y="69" key="MergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1607479824314" />
-    <state x="278" y="168" key="MultipleFileMergeDialog" timestamp="1607479838285">
+    <state x="128" y="69" key="MergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1607497286196" />
+    <state x="278" y="168" key="MultipleFileMergeDialog" timestamp="1607497286299">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="278" y="168" key="MultipleFileMergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1607479838285" />
+    <state x="278" y="168" key="MultipleFileMergeDialog/0.0.1280.800@0.0.1280.800" timestamp="1607497286299" />
     <state x="141" y="39" key="SettingsEditor" timestamp="1607059409326">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -541,10 +540,10 @@
     </state>
     <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607495785940" />
     <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607468142162" />
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607496341084">
+    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607497412458">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1607496341084" />
+    <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.800@0.0.1280.800" timestamp="1607497412458" />
     <state x="468" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/45.23.1235.777@45.23.1235.777" timestamp="1607466957070" />
     <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1607470924421">
       <screen x="0" y="0" width="1280" height="800" />

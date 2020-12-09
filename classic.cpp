@@ -41,36 +41,35 @@ void Classic::setMA(string MA) {
 }
 
 bool Classic::operator<(const Movie& rightSide) const {
-    //MAKE SURE it really is a classic , if not return false
+    //Make sure it really is classic, if not return false
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-	if (this->director.compare(otherClassic->getDirector()) != 0) {
-		return this->director.compare(otherClassic->getDirector()) < 0;
-		if (this->title.compare(otherClassic->getTitle()) != 0) {
-			return this->title.compare(otherClassic->getTitle()) < 0;
-			if (this->MARD.compare(otherClassic->getMARD()) != 0) {
-				return this->MARD.compare(otherClassic->getMARD()) < 0;
-			}
-		}
-	}
-	return false;
+    if (this->year < otherClassic->year) {
+        return true;
+    }
+    else if (this->year == otherClassic->year) {
+        if (this->month < otherClassic->month) return true;
+        else if (this->month == otherClassic->month)
+            if (this->MA.compare(otherClassic->MA) < 0) return true;
+    }
+    // test
+    return false;
 }
 
 bool Classic::operator>(const Movie& rightSide) const {
     //Make sure it really is classic, if not return false
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-	if (this->director.compare(otherClassic->getDirector()) != 0) {
-		return this->director.compare(otherClassic->getDirector()) > 0;
-		if (this->title.compare(otherClassic->getTitle()) != 0) {
-			return this->title.compare(otherClassic->getTitle()) > 0;
-			if (this->MARD.compare(otherClassic->getMARD()) != 0) {
-				return this->MARD.compare(otherClassic->getMARD()) > 0;
-			}
-		}
-	}
-	// test
-	return false;
+    if (this->year > otherClassic->year) {
+        return true;
+    }
+    else if (this->year == otherClassic->year) {
+        if (this->month > otherClassic->month) return true;
+        else if (this->month == otherClassic->month)
+            if (this->MA.compare(otherClassic->MA) > 0) return true;
+    }
+    // test
+    return false;
 }
 
 bool Classic::operator==(const Movie& rightSide) const {
@@ -98,4 +97,10 @@ bool Classic::isDrama() const {
 
 bool Classic::isComedy() const {
     return false;
+}
+
+Classic::Classic(int mo, int ye, string ma) {
+    this->month = mo;
+    this->year = ye;
+    this-> MA = ma;
 }

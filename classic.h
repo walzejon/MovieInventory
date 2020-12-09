@@ -11,6 +11,7 @@ class Classic : public Movie {
 public:
     Classic();
     Classic(int mo, int ye, string ma);
+    Classic(string di, string tit, string MARD);
     string getMARD() const;
     void setMARD(string);
     string getMA() const;
