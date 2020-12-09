@@ -31,7 +31,7 @@ Customer::Customer(istream& readFile)
 // It copies right side to into this "new customer" side
 //----------------------------- Copy Constructor ----------------------------
 // Copy Constructor
-// Preconditions: NONE
+// Preconditions: Customer&
 // Postconditions: NONE
 // --------------------------------------------------------------------------
 Customer::Customer(const Customer& rightSide) 
@@ -41,23 +41,31 @@ Customer::Customer(const Customer& rightSide)
 	lastName = rightSide.lastName;
 }
  
-
+//---------------------------- Constructor ----------------------------------
+// Constructor taking in 3 arguments
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer::Customer(int ID, string firstN, string lastN) {
 	this->id = ID;
 	this->firstName = firstN;
 	this->lastName = lastN;
 }
 
+//---------------------------- Destructor ----------------------------------
 // Destructor
- 
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer::~Customer() 
 {
 }
 
-
-// setData
-// Sets the data to customer from reading the file
- 
+//---------------------------- setData --------------------------------------
+// Sets data of customer read from file (id, first name, last name)
+// Preconditions: data4customers.txt
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Customer::setData(istream& readFile)
  {
 	//get the id
@@ -108,23 +116,41 @@ void Customer::displayCustomerHistory() const
 	cout << endl;
 }
 
-
-// add transaction 
-// Adds a transaction to the customer's history
- 
+//---------------------------- addTransaction -------------------------------
+// Adds transaction into vector of transactions
+// Preconditions: Transaction object
+// Postconditions: NONE
+// -------------------------------------------------------------------------- 
 void Customer::addTransaction(Transaction trans)
  {
 	transHistory.push_back(trans);
 }
 
+//---------------------------- addMovie -------------------------------------
+// Adds movie into vector of movies
+// Preconditions: Movie* objects
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Customer::addMovie(Movie* movie) {
 	currentMovies.push_back(movie);
 }
 
+//---------------------------- removeMovie ----------------------------------
+// Removes movie from vector of movies
+// Preconditions: Movie must exist in vector
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Customer::removeMovie(Movie* movie) {
-	currentMovies.erase(remove(currentMovies.begin(), currentMovies.end(), movie), currentMovies.end());
+	if (checkMovie(movie) == true)
+		currentMovies.erase(remove(currentMovies.begin(), currentMovies.end(), movie), currentMovies.end());
+	else cout << "Couldn't remove non-existent movie";
 }
 
+//---------------------------- checkMovie -----------------------------------
+// Checks to see if movie exists, helper function for removeMovie()
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Customer::checkMovie(Movie* movie) {
 	for (int i = 0; i < currentMovies.size(); ++i) {
 		if (currentMovies[i] == movie) return true;
@@ -142,29 +168,40 @@ void Customer::display()
 	displayCustomerHistory();
 }
 
-
-//all getters 
-
+//---------------------------- Getters --------------------------------------
+// Getter functions for ID, first name, last name
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 int Customer::getCustomerID() const { return id; }
 string Customer::getFirstName() const { return firstName; }
 string Customer::getLastName() const { return lastName; }
 
-
-// Comparison operator == 
- 
+//---------------------------- operator== -----------------------------------
+// Overloaded operator== to compare ID
+// Preconditions: Customer&
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Customer::operator==(const Customer& rightSide) const 
 {
 	return (id == rightSide.id);
 }
 
-
-// Comparison operator != 
-
+//---------------------------- operator!= -----------------------------------
+// Overloaded operator!= to compare ID
+// Preconditions: Customer&
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 bool Customer::operator!=(const Customer& rightSide) const
  {
 	return (id != rightSide.id);
  }
 
+//---------------------------- operator= ------------------------------------
+// Overloaded operator= to assign rightSide values into left side
+// Preconditions: Customer&
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer& Customer::operator=(const Customer& rightSide) {
 	this->id = rightSide.id;
 	this->firstName = rightSide.firstName;
