@@ -13,11 +13,11 @@ Classic::Classic() {
 	this->MARD = "";
 }
 
-Classic::Classic(string di, string tit, string mard)
+Classic::Classic(int mo, int ye, string ma)
 {
-	MARD = mard;
-	director = di;
-	title = tit;
+	month = mo;
+	year = ye;
+	MA = ma;
 }
 
 void Classic::display() {

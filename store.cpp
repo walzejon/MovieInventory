@@ -223,7 +223,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             infile >> month;
             infile >> year;
             getline(infile, MA, ',');
-            Classic* dummy = new Classic(director, title, NULL);
+            Classic* dummy = new Classic(month, year, MA);
             Movie* result;
             if (C.retrieve(dummy, result)) {
                 bor->borrowMovie("C", result, borrower);

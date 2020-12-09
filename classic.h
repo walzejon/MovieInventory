@@ -10,7 +10,7 @@ class Classic : public Movie {
     friend ostream& operator<<(ostream& outputStream, Classic& classic);
 public:
     Classic();
-    Classic(string di, string tit, string mard);
+    Classic(int mo, int ye, string ma);
     string getMARD() const;
     void setMARD(string);
     string getMA() const;
