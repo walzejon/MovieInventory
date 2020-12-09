@@ -23,9 +23,8 @@ void Store::addCustomers(ifstream &infile)
     int ID;
     string firstName;
     string lastName;
-    for(;;)
-    {
-        if(infile.eof()) break;
+    for(;;) {
+        if (infile.eof()) break;
         infile >> ID;
         infile >> firstName;
         infile >> lastName;
@@ -58,6 +57,8 @@ void Store::addMovieInventory(ifstream &infile)
             string MARD;
             getline(infile, MARD);
             Classic* m = new Classic(director, title, MARD);
+            m->setFormat("C");
+            m->setCurrentStock(stoi(stock));
             //insert movie into respective binTree;
             C.insert(m,stoi(stock));
 
@@ -74,6 +75,8 @@ void Store::addMovieInventory(ifstream &infile)
             int releaseDate;
             infile >> releaseDate;
             Comedy* m = new Comedy(director, title, releaseDate);
+            m->setFormat("F");
+            m->setCurrentStock(stoi(stock));
             //insert movie into respective binTree;
             F.insert(m,stoi(stock));
         } // insert comedy
@@ -89,6 +92,8 @@ void Store::addMovieInventory(ifstream &infile)
             int releaseDate;
             infile >> releaseDate;
             Drama* m = new Drama(director, title, releaseDate);
+            m->setFormat("D");
+            m->setCurrentStock(stoi(stock));
             //insert movie into respective binTree;
             D.insert(m,stoi(stock));
         } // insert drama
@@ -173,6 +178,7 @@ void Store::printMoviesSideways(BinTree *A) const
 
 void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
+    cout << "Borrowing " << movieGenre << endl;
     switch (movieGenre) 
     {
         case 'D': {
@@ -192,10 +198,11 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
         case 'F': {
             Borrow* bor = new Borrow();
 
-            string director, title;
-            infile >> director;
-            infile >> title;
-            Comedy* dummy = new Comedy(director, title, NULL);
+            string director, year;
+            getline(infile, director, ',');
+            getline(infile, year, ',');
+            cout<<"Director: "<< director << " Title: " << year<<endl;
+            Comedy* dummy = new Comedy(director, stoi(year), NULL);
             Movie* result;
             if (F.retrieve(dummy, result) == true) {
                 bor->borrowMovie("D", result, borrower);
@@ -300,9 +307,9 @@ int main() {
         cout << "Commands data file not found!" << endl;
         return 1;
     }
-    cout<<"HI"<<endl;
     myStore->addMovieInventory(movies);
-    //myStore->addCustomers(customers);
-    //myStore->doCommands(commands);
+    //myStore->showStock();
+    myStore->addCustomers(customers);
+    myStore->doCommands(commands);
     return 0;
 }

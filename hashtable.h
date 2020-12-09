@@ -31,6 +31,6 @@ public:
 
 private:
     int size;
-    static const int hashGroup = 101; //Should be a prime number
+    static const int hashGroup = 1001; //Should be a prime number
     list<Customer> table[hashGroup];
 };

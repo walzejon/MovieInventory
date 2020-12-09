@@ -31,8 +31,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b45c478f-9ee3-4b10-a091-e0c45174a9d8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hashtable.h" beforeDir="false" afterPath="$PROJECT_DIR$/hashtable.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +66,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cmake-build-debug" />
     <property name="settings.editor.selected.configurable" value="project.scopes" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cmake-build-debug" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -93,14 +98,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="41864000" />
-    </task>
-    <task id="LOCAL-00004" summary="updated hash">
-      <created>1607064724310</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1607064724310</updated>
+      <workItem from="1607059339551" duration="44348000" />
     </task>
     <task id="LOCAL-00005" summary="Customer constructor updated">
       <created>1607065053057</created>
@@ -438,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607482813365</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="good">
+      <created>1607485478738</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1607485478738</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="insert(Customer) NO int ID" />
     <MESSAGE value="store.cpp add customer" />
     <MESSAGE value="binTree display" />
     <MESSAGE value="binTree retreiveData" />
@@ -481,30 +485,47 @@
     <MESSAGE value="took out unnecessary constructor" />
     <MESSAGE value="hashTable.find(int ID) error resolved" />
     <MESSAGE value="dereference" />
-    <option name="LAST_COMMIT_MESSAGE" value="dereference" />
+    <MESSAGE value="good" />
+    <option name="LAST_COMMIT_MESSAGE" value="good" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607482812949">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607485478317">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607482812949" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607485478317" />
     <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
-    <state width="1238" height="171" key="GridCell.Tab.0.bottom" timestamp="1607485357146">
+    <state width="1238" height="230" key="GridCell.Tab.0.bottom" timestamp="1607487853474">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="171" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607485357142" />
-    <state width="1238" height="171" key="GridCell.Tab.0.center" timestamp="1607485357139">
+    <state width="1238" height="230" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607487853467" />
+    <state width="1238" height="230" key="GridCell.Tab.0.center" timestamp="1607487853466">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="171" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607485357139" />
-    <state width="1238" height="171" key="GridCell.Tab.0.left" timestamp="1607485357135">
+    <state width="1238" height="230" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607487853466" />
+    <state width="1238" height="230" key="GridCell.Tab.0.left" timestamp="1607487853464">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="171" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607485357135" />
-    <state width="1238" height="171" key="GridCell.Tab.0.right" timestamp="1607485357141">
+    <state width="1238" height="230" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607487853464" />
+    <state width="1238" height="230" key="GridCell.Tab.0.right" timestamp="1607487853466">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="171" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607485357141" />
+    <state width="1238" height="230" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607487853466" />
+    <state width="1238" height="264" key="GridCell.Tab.1.bottom" timestamp="1607485998878">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607485998878" />
+    <state width="1238" height="264" key="GridCell.Tab.1.center" timestamp="1607485998871">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1607485998871" />
+    <state width="1238" height="264" key="GridCell.Tab.1.left" timestamp="1607485998868">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1607485998868" />
+    <state width="1238" height="264" key="GridCell.Tab.1.right" timestamp="1607485998875">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="264" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1607485998875" />
     <state x="128" y="69" key="MergeDialog" timestamp="1607479824314">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -517,10 +538,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607482816324">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607485481130">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607482816324" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607485481130" />
     <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607468142162" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607483403832">
       <screen x="0" y="0" width="1280" height="800" />
