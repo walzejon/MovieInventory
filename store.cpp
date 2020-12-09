@@ -178,16 +178,17 @@ void Store::printMoviesSideways(BinTree *A) const
 
 void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 {
-    cout << "Borrowing " << movieGenre << endl;
+    cout << "Borrowing " << movieGenre << " genre." << endl;
     switch (movieGenre) 
     {
         case 'D': {
             Borrow* bor = new Borrow();
-            
-            string director, title;    
-            infile >> director;        
-            infile >> title;           
-            Drama* dummy = new Drama(director, title, NULL);
+            string director, title;
+            getline(infile, director, ',');
+            getline(infile, title, ',');
+            Drama* dummy = new Drama();
+            dummy->setDirector(director);
+            dummy->setTitle(title);
             Movie* result;
             if (D.retrieve(dummy, result)) {
                 bor->borrowMovie("D", result, borrower);
@@ -200,18 +201,14 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 
             string title, year;
             getline(infile, title, ',');
-            getline(infile, year, ',');
-            cout<<"Title"<<title << "..Year"<<year<<endl;
+            infile >> year;
             Comedy* dummy = new Comedy();
             dummy->setTitle(title);
             dummy->setYearReleased(stoi(year));
             Movie* result;
             if (F.retrieve(dummy, result)) {
-                cout << result->getMaxStock() << " " << result->getStockDifference() << endl;
-                cout<<result->getTitle() << " " << result->getYear() << endl;
                 bor->borrowMovie("F", result, borrower);
             }
-            cout<<result->getCurrentStock() <<endl;
             delete dummy;
             break;
         }
@@ -222,7 +219,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string MA;
             infile >> month;
             infile >> year;
-            getline(infile, MA, ',');
+            getline(infile, MA);
             Classic* dummy = new Classic(month, year, MA);
             Movie* result;
             if (C.retrieve(dummy, result)) {

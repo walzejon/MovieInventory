@@ -138,7 +138,6 @@ bool BinTree::retrieve(const Movie* dataItem, Movie*& dataFound) const
 // object in this tree. Returns NULL if the item is not found.	
 void BinTree::retrieveHelper(Node* curPtr, const Movie* dataItem, Movie*& dataFound) const
 {
-    //cout<<"dataItem: " << dataItem->getTitle() << " curPTR TIt:" << curPtr->movie->getTitle() << " "  <<endl;
 	if (curPtr == NULL) {
         dataFound = NULL;
     }
