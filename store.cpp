@@ -198,12 +198,12 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
         case 'F': {
             Borrow* bor = new Borrow();
 
-            string director, year;
-            getline(infile, director, ',');
+            string title, year;
+            getline(infile, title, ',');
             getline(infile, year, ',');
-            cout<<"Director"<<director << "..Year"<<year<<endl;
+            cout<<"Title"<<title << "..Year"<<year<<endl;
             Comedy* dummy = new Comedy();
-            dummy->setDirector(director);
+            dummy->setTitle(title);
             dummy->setYearReleased(stoi(year));
             Movie* result;
             if (F.retrieve(dummy, result)) {

@@ -33,6 +33,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bintree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bintree.h" beforeDir="false" afterPath="$PROJECT_DIR$/bintree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/store.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,14 +98,7 @@
       <updated>1606283401662</updated>
       <workItem from="1606283403918" duration="20725000" />
       <workItem from="1607055510780" duration="392000" />
-      <workItem from="1607059339551" duration="49340000" />
-    </task>
-    <task id="LOCAL-00010" summary="hashTable updates">
-      <created>1607067442049</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1607067442049</updated>
+      <workItem from="1607059339551" duration="50929000" />
     </task>
     <task id="LOCAL-00011" summary="hashTable updates">
       <created>1607109053222</created>
@@ -442,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607489931272</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="current">
+      <created>1607493037877</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1607493037877</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +461,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="const shit" />
     <MESSAGE value="doCommands" />
     <MESSAGE value="Classic() shit" />
     <MESSAGE value="can inset into BinTree" />
@@ -485,46 +485,47 @@
     <MESSAGE value="changes" />
     <MESSAGE value="hot sh*t" />
     <MESSAGE value="hot sh*t one more time" />
-    <option name="LAST_COMMIT_MESSAGE" value="hot sh*t one more time" />
+    <MESSAGE value="current" />
+    <option name="LAST_COMMIT_MESSAGE" value="current" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607489930813">
+    <state x="227" y="0" key="CommitChangelistDialog2" timestamp="1607493037439">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607489930813" />
+    <state x="227" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1607493037439" />
     <state x="264" y="23" key="CommitChangelistDialog2/45.23.1235.777@45.23.1235.777" timestamp="1607468137741" />
-    <state width="1238" height="119" key="GridCell.Tab.0.bottom" timestamp="1607492205267">
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom" timestamp="1607494073283">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607492205267" />
-    <state width="1238" height="119" key="GridCell.Tab.0.center" timestamp="1607492205263">
+    <state width="1238" height="154" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607494073283" />
+    <state width="1238" height="154" key="GridCell.Tab.0.center" timestamp="1607494073281">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607492205263" />
-    <state width="1238" height="119" key="GridCell.Tab.0.left" timestamp="1607492205259">
+    <state width="1238" height="154" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1607494073281" />
+    <state width="1238" height="154" key="GridCell.Tab.0.left" timestamp="1607494073281">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607492205259" />
-    <state width="1238" height="119" key="GridCell.Tab.0.right" timestamp="1607492205265">
+    <state width="1238" height="154" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1607494073281" />
+    <state width="1238" height="154" key="GridCell.Tab.0.right" timestamp="1607494073282">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607492205265" />
-    <state width="1238" height="119" key="GridCell.Tab.1.bottom" timestamp="1607492207160">
+    <state width="1238" height="154" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1607494073282" />
+    <state width="1238" height="154" key="GridCell.Tab.1.bottom" timestamp="1607494071469">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607492207160" />
-    <state width="1238" height="119" key="GridCell.Tab.1.center" timestamp="1607492207157">
+    <state width="1238" height="154" key="GridCell.Tab.1.bottom/0.0.1280.800@0.0.1280.800" timestamp="1607494071469" />
+    <state width="1238" height="154" key="GridCell.Tab.1.center" timestamp="1607494071467">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1607492207157" />
-    <state width="1238" height="119" key="GridCell.Tab.1.left" timestamp="1607492207155">
+    <state width="1238" height="154" key="GridCell.Tab.1.center/0.0.1280.800@0.0.1280.800" timestamp="1607494071467" />
+    <state width="1238" height="154" key="GridCell.Tab.1.left" timestamp="1607494071466">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1607492207155" />
-    <state width="1238" height="119" key="GridCell.Tab.1.right" timestamp="1607492207159">
+    <state width="1238" height="154" key="GridCell.Tab.1.left/0.0.1280.800@0.0.1280.800" timestamp="1607494071466" />
+    <state width="1238" height="154" key="GridCell.Tab.1.right" timestamp="1607494071468">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="119" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1607492207159" />
+    <state width="1238" height="154" key="GridCell.Tab.1.right/0.0.1280.800@0.0.1280.800" timestamp="1607494071468" />
     <state x="128" y="69" key="MergeDialog" timestamp="1607479824314">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -537,10 +538,10 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="141" y="39" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1607059409326" />
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607489939545">
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2" timestamp="1607493039244">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607489939545" />
+    <state x="240" y="140" key="Vcs.Push.Dialog.v2/0.0.1280.800@0.0.1280.800" timestamp="1607493039244" />
     <state x="277" y="159" key="Vcs.Push.Dialog.v2/45.23.1235.777@45.23.1235.777" timestamp="1607468142162" />
     <state x="438" y="321" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607483403832">
       <screen x="0" y="0" width="1280" height="800" />
