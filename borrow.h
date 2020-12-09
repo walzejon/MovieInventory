@@ -8,12 +8,18 @@
 
 class Borrow : public Transaction {
 public:
+	//constructor
 	Borrow();
+	//copy constructor
 	Borrow(const Borrow&);
+	//destructor
 	~Borrow();
+
 	bool borrowMovie(string, Movie*, Customer*);
 	bool borrowDrama(string, string);
+	//displays borrowed transactions
 	void display();
+	//creates borrow transactions
 	virtual Transaction* create();
 };
 #endif

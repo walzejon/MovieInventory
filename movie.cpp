@@ -84,6 +84,8 @@ void Movie::setDirector(string director) {
 	this->director = director;
 }
 
+string 
+
 int Movie::getMaxStock() {
 	return this->maxStock;
 }
