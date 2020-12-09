@@ -183,10 +183,9 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
     {
         case 'D': {
             Borrow* bor = new Borrow();
-            
-            string director, title;    
-            infile >> director;        
-            infile >> title;           
+            string director, title;
+            getline(infile, director, ',');
+            getline(infile, title, ',');
             Drama* dummy = new Drama(director, title, NULL);
             Movie* result;
             if (D.retrieve(dummy, result)) {
@@ -200,7 +199,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
 
             string title, year;
             getline(infile, title, ',');
-            getline(infile, year, ',');
+            infile >> year;
             cout<<"Title"<<title << "..Year"<<year<<endl;
             Comedy* dummy = new Comedy();
             dummy->setTitle(title);
@@ -222,7 +221,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string MA;
             infile >> month;
             infile >> year;
-            getline(infile, MA, ',');
+            getline(infile, MA);
             Classic* dummy = new Classic(month, year, MA);
             Movie* result;
             if (C.retrieve(dummy, result)) {
