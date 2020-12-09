@@ -32,6 +32,10 @@ string Movie::getFormat() {
 	return this->movieFormat;
 }
 
+void Movie::display() {
+
+}
+
 void Movie::setFormat(string movieFormat) {
 	this->movieFormat = movieFormat;
 }

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int main() {
+/*int main() {
  
 Store a;
 
@@ -23,4 +23,4 @@ a.doCommands(commands);
 
 return 0;
 
-}
+}*/
