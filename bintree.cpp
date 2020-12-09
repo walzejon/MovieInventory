@@ -50,7 +50,7 @@ bool BinTree::insert(Movie* insertMovie, int copiesIn)
 
 		while (!inserted)
 		{
-			//no dublicate allowed
+			//no duplicate allowed
 			if (*ptr->movie == *current->movie)
 			{
 				delete ptr;
@@ -150,10 +150,14 @@ void BinTree::retrieveHelper(Node* curPtr, const Movie* dataItem, Movie*& dataFo
 	else retrieveHelper(curPtr->right, dataItem, dataFound);
 }
 
+//display pre-order
+
 void BinTree::preorderDisplay() const
 {
     preorderDisplayHelper(root);
 }
+
+//helper function for pre-order display
 
 void BinTree::preorderDisplayHelper(Node* current) const
 {
@@ -165,18 +169,18 @@ void BinTree::preorderDisplayHelper(Node* current) const
 	}
 }
 
-//------------------------- displaySideways ---------------------------------
+
 // Displays a binary tree as though you are viewing it from the side;
-// hard coded displaying to standard output.
-// Preconditions: NONE
+// hard-coded displaying to standard output.
+
 // Postconditions: BinTree remains unchanged.
 void BinTree::displaySideways() const {
     sideways(root, 0);
 }
 
-//---------------------------- Sideways -------------------------------------
+
 // Helper method for displaySideways
-// Preconditions: NONE
+
 // Postconditions: BinTree remains unchanged.
 void BinTree::sideways(Node* current, int level) const {
     if (current != nullptr) {
@@ -187,11 +191,12 @@ void BinTree::sideways(Node* current, int level) const {
         for (int i = level; i >= 0; i--) {
             cout << "    ";
         }
-        cout << *current->movie << endl;        // display information of object
+        cout << *current->movie << endl;      // displays object info
         sideways(current->left, level);
     }
 }
 
+//gets the root 
 BinTree::Node *BinTree::getRoot() {
     return root;
 }
