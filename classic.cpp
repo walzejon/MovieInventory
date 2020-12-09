@@ -60,14 +60,13 @@ bool Classic::operator>(const Movie& rightSide) const {
     //Make sure it really is classic, if not return false
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-	if (this->director.compare(otherClassic->getDirector()) != 0) {
-		return this->director.compare(otherClassic->getDirector()) > 0;
-		if (this->title.compare(otherClassic->getTitle()) != 0) {
-			return this->title.compare(otherClassic->getTitle()) > 0;
-			if (this->MARD.compare(otherClassic->getMARD()) != 0) {
-				return this->MARD.compare(otherClassic->getMARD()) > 0;
-			}
-		}
+	if (this->year > otherClassic->year) {
+		return true;
+	}
+	else if (this->year == otherClassic->year) {
+		if (this->month > otherClassic->month) return true;
+		else if (this->month == otherClassic->month)
+			if (this->MA.compare(otherClassic->MA) > 0) return true;
 	}
 	return false;
 }
