@@ -10,13 +10,13 @@ ostream& operator<<(ostream& outputStream, Comedy& com) {
 Comedy::Comedy() {
 	this->director = "";
 	this->title = "";
-	this->yearReleased = 0;
+	this->year = 0;
 }
 
 Comedy::Comedy(string direc, string tit, int yearR) {
 	director = direc;
 	title = tit;
-	yearReleased = yearR;
+	year = yearR;
 }
 
 
@@ -25,11 +25,11 @@ void Comedy::display() {
 }
 
 int Comedy::getYearReleased() const {
-	return this->yearReleased;
+	return this->year;
 }
 
 void Comedy::setYearReleased(int year) {
-	this->yearReleased = year;
+	this->year = year;
 }
 
 bool Comedy::operator<(const Movie& rightSide) const {
@@ -37,8 +37,8 @@ bool Comedy::operator<(const Movie& rightSide) const {
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
 	if (this->title.compare(otherComedy->getTitle()) != 0) {
 		return this->title.compare(otherComedy->getTitle()) < 0;
-		if (this->yearReleased == (otherComedy->getYearReleased()) != 0) {
-			return this->yearReleased == (otherComedy->getYearReleased()) < 0;
+		if (this->year == (otherComedy->getYearReleased()) != 0) {
+			return this->year == (otherComedy->getYearReleased()) < 0;
 		}
 	}
 	return false;
@@ -49,8 +49,8 @@ bool Comedy::operator>(const Movie& rightSide) const {
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
 	if (this->title.compare(otherComedy->getTitle()) != 0) {
 		return this->title.compare(otherComedy->getTitle()) > 0;
-		if (this->yearReleased == (otherComedy->getYearReleased()) != 0) {
-			return this->yearReleased == (otherComedy->getYearReleased()) > 0;
+		if (this->year == (otherComedy->getYearReleased()) != 0) {
+			return this->year == (otherComedy->getYearReleased()) > 0;
 		}
 	}
 	return false;
@@ -59,7 +59,7 @@ bool Comedy::operator>(const Movie& rightSide) const {
 bool Comedy::operator==(const Movie& rightSide) const {
     if(!rightSide.isComedy()) return false;
     const auto otherComedy = dynamic_cast<const Comedy*>(&rightSide);
-	return (this->title.compare(otherComedy->getTitle()) == 0 && this->yearReleased == otherComedy->getYear());
+	return (this->title.compare(otherComedy->getTitle()) == 0 && this->year == otherComedy->getYear());
 }
 
 bool Comedy::operator!=(const Movie& rightSide) const {

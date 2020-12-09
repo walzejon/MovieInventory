@@ -10,13 +10,13 @@ ostream& operator<<(ostream& outputStream, Drama& drama) {
 Drama::Drama() {
 	this->director = "";
 	this->title = "";
-	this->yearReleased = 0;
+	this->year = 0;
 }
 
 Drama::Drama(string direc, string tit, int yearR) {
 	director = direc;
 	title = tit;
-	yearReleased = yearR;
+	year = yearR;
 }
 
 
@@ -25,11 +25,11 @@ void Drama::display() {
 }
 
 int Drama::getYearReleased() const {
-	return this->yearReleased;
+	return this->year;
 }
 
 void Drama::setYearReleased(int year) {
-	this->yearReleased = year;
+	this->year = year;
 }
 
 bool Drama::operator<(const Movie& rightSide) const {

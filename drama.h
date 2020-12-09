@@ -22,8 +22,6 @@ public:
     virtual bool operator>(const Movie& rightSide) const;
     virtual bool operator==(const Movie& rightSide) const;
     virtual bool operator!=(const Movie& rightSide) const;
-private:
-    int yearReleased;
 };
 
 
