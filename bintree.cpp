@@ -127,10 +127,8 @@ void BinTree::destroyTree(Node*& tree)
 // Finds the provided object in this tree. Returns NULL if the item
 bool BinTree::retrieve(Movie* dataItem, Movie*& dataFound) const
 {
-    cout<<"Starting retrieve" << endl;
 	retrieveHelper(root, dataItem, dataFound);
-    cout << dataFound<<endl;
-
+    cout << "hi"<<endl;
 	if (dataFound != NULL) {
         if (dataItem->getFormat().compare("C") == 0) {
             //add up stock of dataFound.getTitle

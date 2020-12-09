@@ -202,8 +202,9 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             getline(infile, director, ',');
             getline(infile, year, ',');
             cout<<"Director"<<director << "..Year"<<year<<endl;
-            Comedy* dummy = new Comedy(director, NULL,stoi(year));
-            cout<<"Hi"<<endl;
+            Comedy* dummy = new Comedy();
+            dummy->setDirector(director);
+            dummy->setYearReleased(stoi(year));
             Movie* result;
             if (F.retrieve(dummy, result)) {
                 cout << result->getStockOwned() << " " << result->getStockDifference() << endl;
