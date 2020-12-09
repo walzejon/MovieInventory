@@ -238,6 +238,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
             if (D.retrieve(dummy, result) == true) {
                 re->returnMovie("D", result, cust);
             }
+            else cout << "Couldn't retrieve Drama movie" << endl;
             delete dummy;
             break;
         }
@@ -252,6 +253,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
             if (F.retrieve(dummy, result) == true) {
                 re->returnMovie("D", result, cust);
             }
+            else cout << "Couldn't retrieve Comedy movie" << endl;
             delete dummy;
             break;
         }
@@ -266,6 +268,7 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
             if (C.retrieve(dummy, result) == true) {
                 re->returnMovie("D", result, cust);
             }
+            else cout << "Couldn't retrieve Classic movie" << endl;
             delete dummy;
             break;
         }
@@ -275,15 +278,6 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
         }
     }
 }
-<<<<<<< HEAD
-=======
-
-void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
-{
-
-}
-
-
 //runs the program 
 
 int main() {
@@ -303,4 +297,3 @@ a.doCommands(commands);
 return 0;
 
 }
->>>>>>> 98f4e2f4c5a73b1988da263dfb23138e718ce53f
