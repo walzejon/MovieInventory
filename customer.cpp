@@ -117,6 +117,13 @@ void Customer::removeMovie(Movie* movie) {
 	currentMovies.erase(remove(currentMovies.begin(), currentMovies.end(), movie), currentMovies.end());
 }
 
+bool Customer::checkMovie(Movie* movie) {
+	for (int i = 0; i < currentMovies.size(); ++i) {
+		if (currentMovies[i] == movie) return true;
+		else return false;
+	}
+}
+
 // display (customer history)
  
 void Customer::display() 

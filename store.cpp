@@ -130,7 +130,7 @@ void Store::doCommands(ifstream &infile)
             //Check to see if media format is correct
             if(mediaFormat != 'D')
             {////INVALID MEDIA FORMAT ERROR
-                cout << "[ERROR] INVALID MEDIA FORMAT: " << mediaFormat << endl;
+                cout << "[ERROR] INVALID MEDIA FORM4AT: " << mediaFormat << endl;
                 continue;
             }
 
@@ -170,52 +170,103 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
     switch (movieGenre) 
     {
         case 'D': {
+            Borrow* bor = new Borrow();
+            
+            string director, title;    
+            infile >> director;        
+            infile >> title;           
+            Drama* dummy = new Drama(director, title, NULL);
+            Movie* result;
+            if (D.retrieve(dummy, result) == true) {
+                bor->borrowMovie("D", result, borrower);
+            }
+            delete dummy;
+            break;
+        }
+        case 'F': {
+            Borrow* bor = new Borrow();
+
             string director, title;
             infile >> director;
             infile >> title;
-<<<<<<< HEAD
-            Movie* m = new Movie(director, title);
-            m->display();
-=======
-
-            //                         create this constructor
-            //Drama* searchMovie = new Drama(director, title);
-
->>>>>>> 13bc5c13c5609fa447fb902dc46037619f6a9808
-            //find movie in binTree
-
-            //Drama* dataFound = new Drama();
-            //D.retrieve(searchMovie, dataFound);
-
-
-            //borrow(borrower, dataFound);
-        }
-        case 'F': {
-            string title;
-            int year;
-            infile >> title;
-            infile >> year;
-            //find movie in binTree
-
-            //borrow(borrower, director, title);
-
+            Comedy* dummy = new Comedy(director, title, NULL);
+            Movie* result;
+            if (F.retrieve(dummy, result) == true) {
+                bor->borrowMovie("D", result, borrower);
+            }
+            delete dummy;
+            break;
         }
         case 'C': {
-            int month, year;
-            string MA;
+            Borrow* bor = new Borrow();
 
-            infile >> month;
-            infile >> year;
-            getline(infile, MA);
-
-            //find movie in binTree
-
-            //borrow(borrower, title, year);
+            string director, title;
+            infile >> director;
+            infile >> title;
+            Classic* dummy = new Classic(director, title, NULL);
+            Movie* result;
+            if (C.retrieve(dummy, result) == true) {
+                bor->borrowMovie("D", result, borrower);
+            }
+            delete dummy;
+            break;
+        }
+        default: {
+            cout << "Invalid genre";
+            break;
         }
     }
 }
 
 void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
 {
+    switch (movieGenre)
+    {
+        case 'D': {
+            Return* re = new Return();
 
+            string director, title;
+            infile >> director;
+            infile >> title;
+            Drama* dummy = new Drama(director, title, NULL);
+            Movie* result;
+            if (D.retrieve(dummy, result) == true) {
+                re->returnMovie("D", result, cust);
+            }
+            delete dummy;
+            break;
+        }
+        case 'F': {
+            Return* re = new Return();
+
+            string director, title;
+            infile >> director;
+            infile >> title;
+            Comedy* dummy = new Comedy(director, title, NULL);
+            Movie* result;
+            if (F.retrieve(dummy, result) == true) {
+                re->returnMovie("D", result, cust);
+            }
+            delete dummy;
+            break;
+        }
+        case 'C': {
+            Return* re = new Return();
+
+            string director, title;
+            infile >> director;
+            infile >> title;
+            Classic* dummy = new Classic(director, title, NULL);
+            Movie* result;
+            if (C.retrieve(dummy, result) == true) {
+                re->returnMovie("D", result, cust);
+            }
+            delete dummy;
+            break;
+        }
+        default: {
+            cout << "Invalid genre";
+            break;
+        }
+    }
 }

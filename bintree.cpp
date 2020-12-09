@@ -125,7 +125,7 @@ void BinTree::destroyTree(Node*& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-bool BinTree::retrieve(Movie& dataItem, Movie*& dataFound) const
+bool BinTree::retrieve(Movie* dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
 	
@@ -140,18 +140,18 @@ bool BinTree::retrieve(Movie& dataItem, Movie*& dataFound) const
 // retrieveHelper
 // A helper method for retrieve. It recursively finds the provided 
 // object in this tree. Returns NULL if the item is not found.	
-void BinTree::retrieveHelper(Node* curPtr, Movie& dataItem, Movie*& dataFound) const
+void BinTree::retrieveHelper(Node* curPtr, Movie* dataItem, Movie*& dataFound) const
 {
 	//iff current point is null and data is null
 	if (curPtr == NULL)
 		dataFound = NULL;
 
 	//if found, then assign it 
-	else if (dataItem == *curPtr->movie)
+	else if (dataItem == curPtr->movie)
 		dataFound = curPtr->movie;
 
 	//otherwise check recursivly every child
-	else if (dataItem < *curPtr->movie)
+	else if (dataItem < curPtr->movie)
 		retrieveHelper(curPtr->left, dataItem, dataFound);
 	else
 		retrieveHelper(curPtr->right, dataItem, dataFound);
