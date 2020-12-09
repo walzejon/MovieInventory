@@ -59,8 +59,8 @@ bool Drama::operator>(const Movie& rightSide) const {
 bool Drama::operator==(const Movie& rightSide) const {
     if(!rightSide.isDrama()) return false;
     const auto otherDrama = dynamic_cast<const Drama*>(&rightSide);
-	return (this->director.compare(otherDrama->getDirector()) == 0 && this->title.compare(otherDrama->getTitle())
-		== 0);
+	return (this->getDirector().compare(otherDrama->getDirector()) == 0 &&
+		this->getTitle().compare(otherDrama->getTitle()) == 0);
 }
 
 bool Drama::operator!=(const Movie& rightSide) const {
