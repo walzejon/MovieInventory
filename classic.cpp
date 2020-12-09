@@ -13,11 +13,11 @@ Classic::Classic() {
 	this->MARD = "";
 }
 
-Classic::Classic(int mo, int ye, string ma)
+Classic::Classic(string di, string tit, string mard)
 {
-	month = mo;
-	year = ye;
-	MA = ma;
+	MARD = mard;
+	director = di;
+	title = tit;
 }
 
 void Classic::display() {
@@ -44,31 +44,32 @@ bool Classic::operator<(const Movie& rightSide) const {
     //MAKE SURE it really is a classic , if not return false
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-    if (this->year < otherClassic->year) {
-        return true;
-    }
-    else if (this->year == otherClassic->year) {
-        if (this->month < otherClassic->month) return true;
-        else if (this->month == otherClassic->month)
-            if (this->MA.compare(otherClassic->MA) < 0) return true;
-    }
-    return false;
-
+	if (this->director.compare(otherClassic->getDirector()) != 0) {
+		return this->director.compare(otherClassic->getDirector()) < 0;
+		if (this->title.compare(otherClassic->getTitle()) != 0) {
+			return this->title.compare(otherClassic->getTitle()) < 0;
+			if (this->MARD.compare(otherClassic->getMARD()) != 0) {
+				return this->MARD.compare(otherClassic->getMARD()) < 0;
+			}
+		}
+	}
+	return false;
 }
 
 bool Classic::operator>(const Movie& rightSide) const {
     //Make sure it really is classic, if not return false
     if(!rightSide.isClassic()) return false;
     const auto otherClassic = dynamic_cast<const Classic*>(&rightSide);
-    if (this->year > otherClassic->year) {
-        return true;
-    }
-    else if (this->year == otherClassic->year) {
-        if (this->month > otherClassic->month) return true;
-        else if (this->month == otherClassic->month)
-            if (this->MA.compare(otherClassic->MA) > 0) return true;
-    }
-    return false;
+	if (this->director.compare(otherClassic->getDirector()) != 0) {
+		return this->director.compare(otherClassic->getDirector()) > 0;
+		if (this->title.compare(otherClassic->getTitle()) != 0) {
+			return this->title.compare(otherClassic->getTitle()) > 0;
+			if (this->MARD.compare(otherClassic->getMARD()) != 0) {
+				return this->MARD.compare(otherClassic->getMARD()) > 0;
+			}
+		}
+	}
+	return false;
 }
 
 bool Classic::operator==(const Movie& rightSide) const {
@@ -96,8 +97,4 @@ bool Classic::isDrama() const {
 
 bool Classic::isComedy() const {
     return false;
-}
-
-int Classic::getMonth() const {
-    return this->month;
 }
