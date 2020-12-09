@@ -182,10 +182,14 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             //                         create this constructor
             //Drama* searchMovie = new Drama(director, title);
 
+
             //find movie in binTree
 
             //Drama* dataFound = new Drama();
-            //D.retrieve(searchMovie, dataFound);
+            //const auto otherDrama = dynamic_cast<const Movie*>(searchMovie);
+
+            //const auto &dataFound = dynamic_cast<const Movie*>(dataFound);
+            //D.retrieve(*searchMovie, dataFound);
 
 
             //borrow(borrower, dataFound);

@@ -11,6 +11,7 @@ class Drama : public Movie {
 public:
     Drama();
     Drama(string direc, string tit, int yearR);
+    Drama(string direc, string tit);
     int getYearReleased() const;
     void setYearReleased(int year);
     void display();

@@ -19,6 +19,13 @@ Drama::Drama(string direc, string tit, int yearR) {
 	yearReleased = yearR;
 }
 
+// Just used for transactions, something to compare.
+Drama::Drama(string direc, string tit)
+{
+    director = direc;
+    title = tit;
+}
+
 void Drama::display() {
 	cout << *this << endl;
 }
@@ -79,5 +86,3 @@ bool Drama::isDrama() const {
 bool Drama::isComedy() const {
     return false;
 }
-
-
