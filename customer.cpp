@@ -7,27 +7,33 @@ Assignment 4
 #include "customer.h"
 
 
-// Default contructor
-
+//---------------------------- Constructor ----------------------------------
+// Default constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer::Customer() : id(0), firstName(""), lastName("")
 {
 	transHistory.reserve(5);
 }
 
-
-
-// Istream setting data constructor
-
+//---------------------------- Constructor ----------------------------------
+// Constructor taking in 1 argument (reading from file)
+// Preconditions: data4customers.txt
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer::Customer(istream& readFile)
  {
 	setData(readFile);
 }
 
-
-
 // Copy constructor 
 // It copies right side to into this "new customer" side
- 
+//----------------------------- Copy Constructor ----------------------------
+// Copy Constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Customer::Customer(const Customer& rightSide) 
 {
 	id = rightSide.id;
@@ -71,9 +77,11 @@ void Customer::setData(istream& readFile)
 	readFile >> firstName;
 }
 
-
-// Customer History display
-
+//---------------------------- displayCustomerHistory -----------------------
+// Helper function for display()
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Customer::displayCustomerHistory() const
 {
 	//customer id name lastname
@@ -123,9 +131,12 @@ bool Customer::checkMovie(Movie* movie) {
 	}
 	return false;
 }
-
-// display (customer history)
  
+//---------------------------- display --------------------------------------
+// Displays customer history
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Customer::display() 
 {
 	displayCustomerHistory();

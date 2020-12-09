@@ -1,9 +1,23 @@
 #include "history.h"
-//constructor
+//---------------------------- Constructor ----------------------------------
+// Default Constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 History::History() { }
-//destructor
+
+//---------------------------- Destructor -----------------------------------
+// Destructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 History::~History() { }
-//display
+
+//---------------------------- display --------------------------------------
+// Displays Customer history
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void History::display(Customer* cust) {
 	cust->display();
 }
