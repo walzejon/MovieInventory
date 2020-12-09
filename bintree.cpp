@@ -128,11 +128,10 @@ void BinTree::destroyTree(Node*& tree)
 bool BinTree::retrieve(Movie* dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
-    cout << "hi"<<endl;
+    cout << "hi" << endl;
 	if (dataFound != NULL) {
         if (dataItem->getFormat().compare("C") == 0) {
-            //add up stock of dataFound.getTitle
-            //put dataItem.setCurrentStock(sumStock)
+            //cout<<"found"<<endl;
         }
         return true;
     }
@@ -147,19 +146,16 @@ bool BinTree::retrieve(Movie* dataItem, Movie*& dataFound) const
 void BinTree::retrieveHelper(Node* curPtr, Movie* dataItem, Movie*& dataFound) const
 {
 	//iff current point is null and data is null
-	if (curPtr == NULL)
-		dataFound = NULL;
+	if (curPtr == NULL) {
+        dataFound = NULL;
+        //if found, then assign it
+    }
+	else if (*dataItem == *(curPtr->movie)) {
+        dataFound = curPtr->movie;
 
-	//if found, then assign it
-
-	else if (*dataItem == *(curPtr->movie))
-		dataFound = curPtr->movie;
-
-	//otherwise check recursivly every child
-	else if (dataItem < curPtr->movie)
-		retrieveHelper(curPtr->left, dataItem, dataFound);
-	else
-		retrieveHelper(curPtr->right, dataItem, dataFound);
+    }
+	else if (dataItem < curPtr->movie) retrieveHelper(curPtr->left, dataItem, dataFound);
+	else retrieveHelper(curPtr->right, dataItem, dataFound);
 }
 
 void BinTree::preorderDisplay() const
