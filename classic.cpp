@@ -68,6 +68,7 @@ bool Classic::operator>(const Movie& rightSide) const {
 		else if (this->month == otherClassic->month)
 			if (this->MA.compare(otherClassic->MA) > 0) return true;
 	}
+	// test
 	return false;
 }
 
