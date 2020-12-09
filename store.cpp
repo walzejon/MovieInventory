@@ -3,6 +3,11 @@
 //
 #include "store.h"
 
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
 Store::Store()
 {
     //initialize HashTable
@@ -270,3 +275,32 @@ void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+void Store::returnMovie(Customer* cust, char movieGenre, ifstream &infile)
+{
+
+}
+
+
+//runs the program 
+
+int main() {
+ 
+Store a;
+
+ifstream customers("data4customer.txt");
+ifstream commands("data4commands.txt");
+ifstream movies("data4movies.txt");
+
+a.addMovieInventory(movies);
+a.addCustomers(customers);
+a.doCommands(commands);
+
+a.doCommands(commands);
+
+return 0;
+
+}
+>>>>>>> 98f4e2f4c5a73b1988da263dfb23138e718ce53f
