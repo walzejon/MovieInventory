@@ -203,4 +203,3 @@ void BinTree::sideways(Node* current, int level) const {
 BinTree::Node *BinTree::getRoot() {
     return root;
 }
-
