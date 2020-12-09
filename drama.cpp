@@ -19,6 +19,7 @@ Drama::Drama(string direc, string tit, int yearR) {
 	yearReleased = yearR;
 }
 
+
 void Drama::display() {
 	cout << *this << endl;
 }
@@ -79,5 +80,3 @@ bool Drama::isDrama() const {
 bool Drama::isComedy() const {
     return false;
 }
-
-
