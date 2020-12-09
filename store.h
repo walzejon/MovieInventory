@@ -23,22 +23,21 @@ using namespace std;
 
 class Store {
 public:
-    Store();
-    ~Store();
-    void addCustomers(ifstream&);
-    void addMovieInventory(ifstream&);
-    void doCommands(ifstream&);
-    //void newMoviestock(); idk if we need this
-    void printCustomers();
-    void printHistory();
-    void showStock() const;
-    void printMoviesSideways(BinTree* A) const;
+    Store();                                       // Constructor
+    ~Store();                                      // Destructor
+    void addCustomers(ifstream&);                  // Add customers
+    void addMovieInventory(ifstream&);             // Add movie into inventory
+    void doCommands(ifstream&);                    // Perform commands
+    void printCustomers();                         // Print out customer list
+    void printHistory();                           // Print out transaction history
+    void showStock() const;                        // Show the current stock
+    void printMoviesSideways(BinTree* A) const;    // Sideways BinTree display
 
 private:
-    void borrowMovie(Customer* borrower, char movieGenre, ifstream& infile);
-    void returnMovie(Customer* cust, char movieGenre, ifstream& infile);
+    void borrowMovie(Customer* borrower, char movieGenre, ifstream& infile);  //borrow movie
+    void returnMovie(Customer* cust, char movieGenre, ifstream& infile);      //return movie
 
-    HashTable customerTable;
+    HashTable customerTable;                    
     BinTree F, D, C; //Comedy, Drama, Classic
     vector<Transaction> transHistory;
 };

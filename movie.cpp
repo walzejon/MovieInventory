@@ -202,8 +202,6 @@ void Movie::setMA(string ma) {
 // Preconditions: NONE
 // Postconditions: NONE
 // --------------------------------------------------------------------------
-=======
->>>>>>> f48e5beebb532939f5216bd6d3084aefbd240e41
 int Movie::getMaxStock() {
 	return this->maxStock;
 }
