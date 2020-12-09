@@ -125,14 +125,10 @@ void BinTree::destroyTree(Node*& tree)
 
 // retrieve 
 // Finds the provided object in this tree. Returns NULL if the item
-bool BinTree::retrieve(const Movie* dataItem, Movie* dataFound) const
+bool BinTree::retrieve(const Movie* dataItem, Movie*& dataFound) const
 {
 	retrieveHelper(root, dataItem, dataFound);
-    //cout << "hi" << endl;
 	if (dataFound != NULL) {
-//        if (dataItem->getFormat().compare("C") == 0) {
-//            //cout<<"found"<<endl;
-//        }
         return true;
     }
 	else return false;
@@ -140,15 +136,15 @@ bool BinTree::retrieve(const Movie* dataItem, Movie* dataFound) const
 // retrieveHelper
 // A helper method for retrieve. It recursively finds the provided 
 // object in this tree. Returns NULL if the item is not found.	
-void BinTree::retrieveHelper(Node* curPtr, const Movie* dataItem, Movie* dataFound) const
+void BinTree::retrieveHelper(Node* curPtr, const Movie* dataItem, Movie*& dataFound) const
 {
-    cout<<"dataItem: " << dataItem->getTitle() << " curPTR TIt:" << curPtr->movie->getTitle() << " "  <<endl;
+    //cout<<"dataItem: " << dataItem->getTitle() << " curPTR TIt:" << curPtr->movie->getTitle() << " "  <<endl;
 	if (curPtr == NULL) {
         dataFound = NULL;
     }
 	else if (*dataItem == *(curPtr->movie)) {
-	    cout<<"is equal" <<endl;
-        *dataFound = *curPtr->movie;
+        dataFound = curPtr->movie;
+        return;
     }
 	else if (*dataItem < *(curPtr->movie)) retrieveHelper(curPtr->left, dataItem, dataFound);
 	else retrieveHelper(curPtr->right, dataItem, dataFound);

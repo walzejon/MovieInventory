@@ -32,7 +32,7 @@ public:
 
 	void makeEmpty(); 
 	//retrieve movie
-	bool retrieve(const Movie*, Movie*) const; // look at later
+	bool retrieve(const Movie*, Movie*&) const; // look at later
 	//displays order
 	void preorderDisplay() const;
 
@@ -41,7 +41,7 @@ public:
 	void displaySideways() const;
 
 private:
-	void retrieveHelper(Node* curPtr, const Movie* dataItem, Movie* dataFound) const;
+	void retrieveHelper(Node* curPtr, const Movie* dataItem, Movie*& dataFound) const;
 	//helper method to destroy the tree
 	void destroyTree(Node*&);
 	void preorderDisplayHelper(Node* current) const;

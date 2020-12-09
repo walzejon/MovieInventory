@@ -189,7 +189,7 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             infile >> title;           
             Drama* dummy = new Drama(director, title, NULL);
             Movie* result;
-            if (D.retrieve(dummy, result) == true) {
+            if (D.retrieve(dummy, result)) {
                 bor->borrowMovie("D", result, borrower);
             }
             delete dummy;
@@ -207,10 +207,12 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             dummy->setYearReleased(stoi(year));
             Movie* result;
             if (F.retrieve(dummy, result)) {
-                cout << result->getStockOwned() << " " << result->getStockDifference() << endl;
-                bor->borrowMovie("D", result, borrower);
+                cout << result->getMaxStock() << " " << result->getStockDifference() << endl;
+                cout<<result->getTitle() << " " << result->getYear() << endl;
+                bor->borrowMovie("F", result, borrower);
             }
-            //delete dummy;
+            cout<<result->getCurrentStock() <<endl;
+            delete dummy;
             break;
         }
         case 'C': {
@@ -221,8 +223,8 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             infile >> title;
             Classic* dummy = new Classic(director, title, NULL);
             Movie* result;
-            if (C.retrieve(dummy, result) == true) {
-                bor->borrowMovie("D", result, borrower);
+            if (C.retrieve(dummy, result)) {
+                bor->borrowMovie("C", result, borrower);
             }
             delete dummy;
             break;
@@ -295,17 +297,17 @@ int main() {
     Store* myStore = new Store();
 
     ifstream commands, customers, movies;
-    movies = ifstream("C:/Users/shado/Documents/MovieInventory/data4movies.txt");
+    movies = ifstream("data4movies.txt");
     if (!movies) {
         cout << "Movies data file not found!" << endl;
         return 1;
     }
-    customers = ifstream("C:/Users/shado/Documents/MovieInventory/data4customers.txt");
+    customers = ifstream("data4customers.txt");
     if (!customers) {
         cout << "Customer data file not found!" << endl;
         return 1;
     }
-    commands = ifstream("C:/Users/shado/Documents/MovieInventory/data4commands.txt");
+    commands = ifstream("data4commands.txt");
     if (!commands) {
         cout << "Commands data file not found!" << endl;
         return 1;
