@@ -178,7 +178,6 @@ void Movie::setDirector(string director) {
 	this->director = director;
 }
 
-<<<<<<< HEAD
 //--------------------------------- getMA -----------------------------------
 // Returns major actor
 // Preconditions: NONE
