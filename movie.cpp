@@ -84,7 +84,13 @@ void Movie::setDirector(string director) {
 	this->director = director;
 }
 
-string 
+string Movie::getMA() {
+	return this->MA;
+}
+
+void Movie::setMA(string ma) {
+	this->MA = ma;
+}
 
 int Movie::getMaxStock() {
 	return this->maxStock;
