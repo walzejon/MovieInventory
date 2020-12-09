@@ -186,7 +186,9 @@ void Store::borrowMovie(Customer* borrower, char movieGenre, ifstream& infile)
             string director, title;
             getline(infile, director, ',');
             getline(infile, title, ',');
-            Drama* dummy = new Drama(director, title, NULL);
+            Drama* dummy = new Drama();
+            dummy->setDirector(director);
+            dummy->setTitle(title);
             Movie* result;
             if (D.retrieve(dummy, result)) {
                 bor->borrowMovie("D", result, borrower);

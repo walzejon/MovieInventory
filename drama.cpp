@@ -8,9 +8,7 @@ ostream& operator<<(ostream& outputStream, Drama& drama) {
 }
 
 Drama::Drama() {
-	this->director = "";
-	this->title = "";
-	this->year = 0;
+
 }
 
 Drama::Drama(string direc, string tit, int yearR) {
