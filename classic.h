@@ -14,6 +14,7 @@ public:
     string getMARD() const;
     void setMARD(string);
     string getMA() const;
+    int getMonth() const;
     void setMA(string);
     void display();
     virtual bool isClassic() const;
