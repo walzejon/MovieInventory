@@ -2,10 +2,18 @@
 #include "bintree.h"
 #include "movie.h"
 
-//default constructor
+//------------------------------ Constructor --------------------------------
+// Default constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Borrow::Borrow() { transactionType = 'B'; }
 
-//copy constructor
+//------------------------------ Copy Constructor ---------------------------
+// Copy constructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Borrow::Borrow(const Borrow& rightSide) {
 	transactionID = rightSide.transactionID;
 	transactionType = rightSide.transactionType;
@@ -13,10 +21,18 @@ Borrow::Borrow(const Borrow& rightSide) {
 	hasBeenBorrowed = rightSide.hasBeenBorrowed;
 }
 
-//destructor
+//------------------------------ Destructor ---------------------------------
+// Destructor
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Borrow::~Borrow() { }
 
-//getters and setters, transaction creation, display
+//------------------------------ borrowMovie --------------------------------
+// Borrows the movie
+// Preconditions: Movie exists in inventory
+// Postconditions: Customer now has movie
+// --------------------------------------------------------------------------
 bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 	if (movie->getCurrentStock() > 0) {
 		movie->setCurrentStock(movie->getCurrentStock() - 1);
@@ -34,11 +50,21 @@ bool Borrow::borrowMovie(string media, Movie* movie, Customer* cust) {
 		return false;
 	}
 }
-//displays the transaction type and the type of movie
+
+//------------------------------ display ====--------------------------------
+// Display function
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 void Borrow::display() {
 	cout << movieType << " " << transactionType << " " << endl;
 }
-//creates a new borrow transaction 
+
+//------------------------------ create -------------------------------------
+// Creates new instance of Borrow
+// Preconditions: NONE
+// Postconditions: NONE
+// --------------------------------------------------------------------------
 Transaction* Borrow::create() {
 	return new Borrow();
 }
