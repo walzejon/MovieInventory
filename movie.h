@@ -37,6 +37,9 @@ public:
     string getTitle() const;
     void setTitle(string title);
 
+    int getYear() const;
+    void setYear(int year);
+
     // Getter and Setter for director
     string getDirector() const;
     void setDirector(string director);
